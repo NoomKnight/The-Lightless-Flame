@@ -118,6 +118,67 @@ h3.wing small{display:block;font-family:'IM Fell English SC',serif;font-size:12p
 .dn-dread .dlabel{fill:#9c5548;font-style:italic}
 .dnode:hover .dlabel,.dnode.dsel .dlabel{fill:var(--vellum)}
 .dnode:focus-visible circle{outline:2px solid var(--gilt)}
+.timescope{background:var(--panel);border:1px solid var(--panel-edge);border-left:2px solid var(--gilt);padding:18px 22px;margin:24px 0 8px}
+.ts-head{font-family:'Cormorant Garamond',serif;font-size:20px;margin-bottom:10px}
+.ts-label{color:var(--vellum-dim)}
+.ts-val{color:var(--gilt);font-weight:600}
+.ts-sub{color:var(--ash);font-size:13px;font-style:italic;margin-top:8px}
+#tsrange{width:100%;accent-color:var(--gilt);cursor:pointer;height:6px}
+.ts-faded{opacity:.32;filter:grayscale(.4)}
+.vksig{cursor:text;color:inherit}
+.vksig:focus-visible{outline:none}
+.vkmodal-bg{position:fixed;inset:0;background:rgba(6,10,14,.82);backdrop-filter:blur(3px);display:none;align-items:center;justify-content:center;z-index:1000;padding:24px}
+.vkmodal-bg.open{display:flex;animation:vkfade .5s ease}
+@keyframes vkfade{from{opacity:0}to{opacity:1}}
+.vkmodal{position:relative;max-width:600px;width:100%;max-height:88vh;overflow-y:auto;
+  background:linear-gradient(170deg,#101820,#0a1016);border:1px solid #2a3f4d;
+  box-shadow:0 0 60px rgba(120,170,200,.12),inset 0 0 80px rgba(8,14,20,.6);
+  padding:32px 34px;color:#c4d2db}
+.vkmodal-head{border-bottom:1px solid #233642;padding-bottom:16px;margin-bottom:18px}
+.vk-eyebrow{font-family:'IM Fell English SC',serif;font-size:11px;letter-spacing:2.5px;color:#6f95a8;margin-bottom:8px}
+.vkmodal-head h2{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:30px;color:#d6e4ec;line-height:1.1}
+.vk-sub{font-family:'IM Fell English SC',serif;font-size:12px;letter-spacing:1.5px;color:#6f95a8;margin-top:6px}
+.vk-entry{padding:14px 0;border-bottom:1px dotted #1e2f3a}
+.vk-acct{font-family:'IM Fell English SC',serif;font-size:13px;letter-spacing:1.5px;color:#9ab8c8;display:inline}
+.vk-stat{font-family:'IM Fell English SC',serif;font-size:10px;letter-spacing:1.5px;padding:2px 8px;margin-left:8px;border:1px solid;border-radius:2px;vertical-align:middle}
+.vk-stat.paid{color:#7d9a6a;border-color:#3d5a3a}
+.vk-stat.open{color:#c98a6a;border-color:#6a4a3a}
+.vk-stat.fav{color:#8ab0c8;border-color:#3a5a6a}
+.vk-stat.rule{color:#8a8ab0;border-color:#4a4a6a}
+.vk-entry p{font-size:14.5px;margin-top:8px;color:#aebfc9}
+.vk-margin{font-size:13.5px;color:#7e9aa8}
+.vk-margin i{color:#b8d0dd}
+.vk-fade{opacity:.72}
+.vk-foot{margin-top:18px;padding-top:14px;border-top:1px solid #233642;font-style:italic;font-size:13px;color:#6f95a8;text-align:center}
+.vkclose{position:absolute;top:14px;right:18px;background:none;border:none;color:#6f95a8;font-size:26px;cursor:pointer;line-height:1}
+.vkclose:hover{color:#d6e4ec}
+.gw-scene{position:relative;width:100%;border:1px solid var(--panel-edge);overflow:hidden;margin-bottom:26px;background:#0e0a07}
+.gw-svg{width:100%;display:block}
+.gw-caption{position:absolute;left:18px;bottom:12px;font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:600;color:var(--vellum);text-shadow:0 2px 8px rgba(0,0,0,.8);letter-spacing:.5px}
+/* windows: dark by default, warm when .lit on the scene */
+.gw-window rect{fill:#0a0806}
+.gw-scene.lit.held .gw-window rect{fill:#ffcf7a;filter:drop-shadow(0 0 3px rgba(255,180,90,.9));animation:gwflick 5s ease-in-out infinite}
+.gw-window rect#gw-library{animation-delay:1.4s}
+@keyframes gwflick{0%,100%{opacity:1}45%{opacity:.82}70%{opacity:.95}}
+/* torch glows: invisible by day, warm at dusk/night */
+.gw-torchglow{opacity:0;transition:opacity 2s}
+.gw-scene.lit.held .gw-torchglow{opacity:.85;animation:gwtorch 3.5s ease-in-out infinite}
+.gw-torchglow:nth-child(2){animation-delay:.6s}
+.gw-torchglow:nth-child(3){animation-delay:1.1s}
+.gw-torchglow:nth-child(4){animation-delay:1.7s}
+.gw-torchglow:nth-child(5){animation-delay:2.2s}
+@keyframes gwtorch{0%,100%{opacity:.85;transform:scale(1)}50%{opacity:.55;transform:scale(.9)}}
+/* seasonal tints */
+.gw-scene.s-winter .gw-svg path[fill="#0f1812"]{fill:#1a2620}
+.gw-scene.s-winter #gw-keep rect, .gw-scene.s-winter #gw-keep polygon{}
+.gw-scene.s-autumn .gw-svg path[fill="#0f1812"]{fill:#1c1810}
+.gw-scene.s-spring .gw-svg path[fill="#0f1812"]{fill:#12200f}
+.gw-scene.s-summer .gw-svg path[fill="#0f1812"]{fill:#0f1c10}
+#gw-fireflies{opacity:0;transition:opacity 2s}
+.gw-scene.lit.s-summer #gw-fireflies{opacity:1}
+.gw-scene.s-winter .gw-svg path[fill="#161009"]{fill:#1c1a17}
+.gw-scene.s-winter .gw-svg path[fill="#120c07"]{fill:#15130f}
+@media (prefers-reduced-motion: reduce){.gw-scene *{animation:none!important}.gw-svg animate,.gw-svg animateTransform{display:none}}
 @media(max-width:900px){.layout{flex-direction:column}nav{width:100%;height:auto;position:static;display:flex;flex-wrap:wrap;padding:14px}
 .sigil{border:none;padding:6px 12px;margin:0;width:100%}nav button{width:auto}nav .foot{display:none}
 main{padding:24px 18px}.standing-grid,.npc-grid{grid-template-columns:1fr}}
@@ -142,8 +203,173 @@ main{padding:24px 18px}.standing-grid,.npc-grid{grid-template-columns:1fr}}
 <main>
 
 <section id="standing" class="view active">
+  <div class="gw-scene" id="gwscene">
+<svg viewBox="0 0 1000 340" preserveAspectRatio="xMidYMid slice" class="gw-svg" aria-label="A living view of Greenwatch">
+  <defs>
+    <linearGradient id="gw-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a2740" id="sky-top"/>
+      <stop offset="100%" stop-color="#3a3324" id="sky-bot"/>
+    </linearGradient>
+    <radialGradient id="gw-sun" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff3d0"/><stop offset="60%" stop-color="#ffd97a"/><stop offset="100%" stop-color="#ffd97a" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="gw-moon" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e8eef5"/><stop offset="65%" stop-color="#c7d3df"/><stop offset="100%" stop-color="#c7d3df" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="gw-torch" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffd27a"/><stop offset="100%" stop-color="#ff9a3c" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="gw-soft"><feGaussianBlur stdDeviation="2"/></filter>
+  </defs>
+
+  <!-- SKY -->
+  <rect width="1000" height="340" fill="url(#gw-sky)"/>
+  <!-- stars (fade in at night via JS opacity on the group) -->
+  <g id="gw-stars" opacity="0">
+    <circle cx="120" cy="50" r="1.2" fill="#fff"/><circle cx="300" cy="30" r="1" fill="#fff"/>
+    <circle cx="480" cy="60" r="1.3" fill="#fff"/><circle cx="640" cy="40" r="1" fill="#fff"/>
+    <circle cx="820" cy="55" r="1.2" fill="#fff"/><circle cx="900" cy="28" r="1" fill="#fff"/>
+    <circle cx="220" cy="80" r="1" fill="#fff"/><circle cx="720" cy="78" r="1.1" fill="#fff"/>
+    <circle cx="60" cy="90" r="1" fill="#fff"/><circle cx="560" cy="22" r="1" fill="#fff"/>
+  </g>
+  <!-- sun/moon: cx/cy and href set by JS along a daylight arc -->
+  <circle id="gw-orb" cx="500" cy="280" r="34" fill="url(#gw-sun)"/>
+  <circle id="gw-orb-core" cx="500" cy="280" r="15" fill="#fff7e0"/>
+
+  <!-- DISTANT MIST over treeline -->
+  <g id="gw-mist" opacity="0.5">
+    <ellipse cx="250" cy="210" rx="220" ry="22" fill="#9fb0bd" opacity="0.10">
+      <animate attributeName="cx" values="250;300;250" dur="40s" repeatCount="indefinite"/></ellipse>
+    <ellipse cx="700" cy="220" rx="260" ry="26" fill="#9fb0bd" opacity="0.10">
+      <animate attributeName="cx" values="700;640;700" dur="48s" repeatCount="indefinite"/></ellipse>
+  </g>
+
+  <!-- FOREST treeline (silhouette) -->
+  <path d="M0,230 L0,200 Q20,180 35,200 Q50,175 70,198 Q90,172 110,196 Q130,178 150,200 Q175,172 195,198 Q215,180 240,200 Q265,174 285,198 Q310,178 335,200 Q360,172 385,197 Q410,180 435,200 Q460,174 485,198 Q510,176 535,200 Q560,174 585,197 Q610,180 635,199 Q660,173 685,198 Q710,178 735,200 Q760,174 785,198 Q810,178 835,199 Q860,174 885,198 Q910,180 935,200 Q960,174 985,198 L1000,200 L1000,230 Z"
+    fill="#0f1812"/>
+  <!-- a few tree spikes for texture -->
+  <g fill="#0c140e">
+    <path d="M120,198 l8,-34 l8,34 z"/><path d="M360,196 l9,-40 l9,40 z"/>
+    <path d="M620,197 l8,-36 l8,36 z"/><path d="M860,197 l9,-38 l9,38 z"/>
+  </g>
+
+  <!-- GREEN DRAGONS in the treeline (pre-S30 only; JS toggles #gw-dragons) -->
+  <g id="gw-dragons" opacity="0">
+    <!-- Dragon head peering over the left wall, from inside the courtyard -->
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0,2;0,-2;0,2" dur="7s" repeatCount="indefinite" additive="sum"/>
+      <!-- neck/snout silhouette rising behind crenellation -->
+      <path d="M430,172 Q432,150 446,146 Q462,142 470,150 Q462,152 458,156 Q470,158 466,164 Q452,160 446,164 Q440,170 438,172 Z" fill="#16301d"/>
+      <!-- horn -->
+      <path d="M448,146 L452,138 L455,147 Z" fill="#16301d"/>
+      <!-- eye -->
+      <circle cx="452" cy="153" r="2.1" fill="#9be07a"><animate attributeName="opacity" values="1;0.35;1" dur="4.5s" repeatCount="indefinite"/></circle>
+      <circle cx="452" cy="153" r="0.8" fill="#16301d"/>
+    </g>
+    <!-- Dragon head peering over the right wall -->
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0,-2;0,2;0,-2" dur="8s" repeatCount="indefinite" additive="sum"/>
+      <path d="M570,172 Q568,150 554,146 Q538,142 530,150 Q538,152 542,156 Q530,158 534,164 Q548,160 554,164 Q560,170 562,172 Z" fill="#16301d"/>
+      <path d="M552,146 L548,138 L545,147 Z" fill="#16301d"/>
+      <circle cx="548" cy="153" r="2.1" fill="#9be07a"><animate attributeName="opacity" values="0.35;1;0.35" dur="5.5s" repeatCount="indefinite"/></circle>
+      <circle cx="548" cy="153" r="0.8" fill="#16301d"/>
+    </g>
+  </g>
+
+  <!-- GROUND/HILL -->
+  <path d="M0,230 Q500,200 1000,230 L1000,340 L0,340 Z" fill="#161009"/>
+  <path d="M0,250 Q500,224 1000,250 L1000,340 L0,340 Z" fill="#120c07"/>
+
+  <!-- GREENWATCH KEEP silhouette on the hill -->
+  <g id="gw-keep">
+    <!-- main curtain wall -->
+    <rect x="380" y="170" width="240" height="80" fill="#0c0907"/>
+    <!-- crenellations -->
+    <g fill="#0c0907">
+      <rect x="380" y="162" width="16" height="12"/><rect x="408" y="162" width="16" height="12"/>
+      <rect x="436" y="162" width="16" height="12"/><rect x="464" y="162" width="16" height="12"/>
+      <rect x="492" y="162" width="16" height="12"/><rect x="520" y="162" width="16" height="12"/>
+      <rect x="548" y="162" width="16" height="12"/><rect x="576" y="162" width="16" height="12"/>
+      <rect x="604" y="162" width="16" height="12"/>
+    </g>
+    <!-- towers -->
+    <rect x="366" y="140" width="34" height="110" fill="#0a0806"/>
+    <rect x="600" y="140" width="34" height="110" fill="#0a0806"/>
+    <polygon points="366,140 383,118 400,140" fill="#0a0806"/>
+    <polygon points="600,140 617,118 634,140" fill="#0a0806"/>
+    <!-- central keep tower -->
+    <rect x="476" y="110" width="48" height="60" fill="#0a0806"/>
+    <polygon points="476,110 500,86 524,110" fill="#0a0806"/>
+
+    <!-- WINDOWS (lit at dusk/night via JS class on #gwscene) -->
+    <g class="gw-window">
+      <rect x="378" y="165" width="8" height="12" rx="1"/>
+      <rect x="612" y="165" width="8" height="12" rx="1"/>
+      <rect x="492" y="125" width="7" height="11" rx="1" id="gw-library"/>
+      <rect x="501" y="125" width="7" height="11" rx="1"/>
+      <rect x="440" y="195" width="7" height="11" rx="1"/>
+      <rect x="490" y="200" width="7" height="11" rx="1"/>
+      <rect x="552" y="195" width="7" height="11" rx="1"/>
+    </g>
+
+    <!-- BANNER on central tower (post-grant only; JS toggles #gw-banner) -->
+    <g id="gw-banner" opacity="0">
+      <line x1="500" y1="86" x2="500" y2="70" stroke="#0a0806" stroke-width="2"/>
+      <path d="M500,72 L524,76 L520,86 L524,96 L500,92 Z" fill="#7d3a2e">
+        <animate attributeName="d" values="M500,72 L524,76 L520,86 L524,96 L500,92 Z;M500,72 L522,74 L524,86 L522,98 L500,92 Z;M500,72 L524,76 L520,86 L524,96 L500,92 Z" dur="4s" repeatCount="indefinite"/>
+      </path>
+    </g>
+
+    <!-- TORCHES on the walls (glow appears at dusk/night via JS) -->
+    <g class="gw-torch-layer">
+      <circle class="gw-torchglow" cx="383" cy="160" r="14" fill="url(#gw-torch)"/>
+      <circle class="gw-torchglow" cx="617" cy="160" r="14" fill="url(#gw-torch)"/>
+      <circle class="gw-torchglow" cx="500" cy="108" r="13" fill="url(#gw-torch)"/>
+      <circle class="gw-torchglow" cx="450" cy="160" r="11" fill="url(#gw-torch)"/>
+      <circle class="gw-torchglow" cx="550" cy="160" r="11" fill="url(#gw-torch)"/>
+    </g>
+
+    <!-- KOBOLD SENTRIES patrolling the wall-walk (post-S30; JS toggles #gw-kobolds) -->
+    <g id="gw-kobolds" opacity="0" fill="#0a0806">
+      <g>
+        <rect x="412" y="158" width="4.5" height="11"/><circle cx="414" cy="155" r="3.2"/>
+        <line x1="417" y1="156" x2="417" y2="146" stroke="#0a0806" stroke-width="1.4"/>
+        <animateTransform attributeName="transform" type="translate" values="0,0; 188,0; 0,0" dur="24s" repeatCount="indefinite"/>
+      </g>
+      <g>
+        <rect x="566" y="158" width="4.5" height="11"/><circle cx="568" cy="155" r="3.2"/>
+        <line x1="571" y1="156" x2="571" y2="146" stroke="#0a0806" stroke-width="1.4"/>
+        <animateTransform attributeName="transform" type="translate" values="0,0; -150,0; 0,0" dur="28s" repeatCount="indefinite"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- SEASONAL PARTICLES (populated by JS) -->
+  <g id="gw-snow"></g>
+  <g id="gw-leaves"></g>
+  <g id="gw-fireflies"></g>
+
+  <!-- BIRDS crossing occasionally -->
+  <g id="gw-birds" fill="none" stroke="#0c0c0c" stroke-width="1.5" opacity="0.6">
+    <g>
+      <path d="M0,0 q4,-4 8,0 q4,-4 8,0"/>
+      <animateTransform attributeName="transform" type="translate" values="-40,90; 1040,60" dur="30s" repeatCount="indefinite"/>
+    </g>
+    <g>
+      <path d="M0,0 q3,-3 6,0 q3,-3 6,0"/>
+      <animateTransform attributeName="transform" type="translate" values="-60,110; 1060,80" dur="38s" begin="6s" repeatCount="indefinite"/>
+    </g>
+  </g>
+</svg>
+<div class="gw-caption" id="gw-caption">Greenwatch</div>
+</div>
   <div class="eyebrow">The State of Things</div>
   <h2 class="page">Where We Stand</h2>
+  <div class="timescope" id="timescope">
+  <div class="ts-head"><span class="ts-label">Viewing the duchy as of</span> <span class="ts-val" id="tsval">Session 46 — Now</span></div>
+  <input type="range" id="tsrange" min="1" max="46" value="46" step="1" aria-label="Campaign session slider">
+  <div class="ts-sub">Drag back through two years of history. The map, the chronicle, and the people all remember where they were.</div>
+</div>
   <div class="standing-grid">
     <div class="card"><h3>The Party</h3>
       <p class="big">The Mighty Morphin&rsquo; Power Rangers</p>
@@ -167,7 +393,7 @@ main{padding:24px 18px}.standing-grid,.npc-grid{grid-template-columns:1fr}}
   <h2 class="page">The Duchy of Greenwatch</h2>
   <p class="lede">Everything Greenwatch in one place. The keep, the people, the army, and the house beneath the house.</p>
 
-  <div class="duchy-block">
+  <div class="duchy-block" data-since="24">
     <h3>The Keep</h3>
     <p>Granted by King Aleric Valethorn the 5th after the Titus business. It came with two green dragons; it doesn&rsquo;t have them anymore. Terrick&rsquo;s crews have been building ever since, and with the royal writ, six hundred settlers and a team of royal specialists are on their way. The duchy is about to double.</p>
   </div>
@@ -175,17 +401,17 @@ main{padding:24px 18px}.standing-grid,.npc-grid{grid-template-columns:1fr}}
   <div class="duchy-block">
     <h3>The People</h3>
     <ul>
-      <li><b>Steve (Stephen Rogers)</b> &mdash; runs the garrison and drills the troops. Most of them are kobolds, and he&rsquo;s making real soldiers out of them.</li>
-      <li><b>Christopher Hasenpfeffer</b> &mdash; William&rsquo;s brother. Fourteen. Runs the library.</li>
-      <li><b>Shadow</b> &mdash; Strixhaven-trained rogue. Found at the Allfield academy and brought to Strixhaven by the party. Now lives at Greenwatch.</li>
-      <li><b>Melethor</b> &mdash; Shadow&rsquo;s friend from Strixhaven.</li>
-      <li><b>Sterling Pemberton</b> &mdash; Strixhaven history professor. Came out with the party and never really left.</li>
-      <li><b>Brock</b> &mdash; an amethyst dragon. Lives at the keep. On our side.</li>
-      <li><b>Despona</b> &mdash; drow doctor and informant. Provided the map of the deep roads. Lives at Greenwatch under Steve&rsquo;s watch.</li>
-      <li><b>Terrick</b> &mdash; master artisan. Builds faster than the duchy can plan.</li>
-      <li><b>Mira</b> &mdash; painter. Working on the mural.</li>
-      <li><b>Phelban Shelkesha (&ldquo;Blue Corn&rdquo;)</b> &mdash; duergar informant under the duchy&rsquo;s protection.</li>
-      <li><b>Iroh</b> &mdash; with the party.</li>
+      <li data-since="27"><b>Steve (Stephen Rogers)</b> &mdash; runs the garrison and drills the troops. Most of them are kobolds, and he&rsquo;s making real soldiers out of them.</li>
+      <li data-since="37"><b>Christopher Hasenpfeffer</b> &mdash; William&rsquo;s brother. Fourteen. Runs the library.</li>
+      <li data-since="26"><b>Shadow</b> &mdash; Strixhaven-trained rogue. Found at the Allfield academy and brought to Strixhaven by the party. Now lives at Greenwatch.</li>
+      <li data-since="26"><b>Melethor</b> &mdash; Shadow&rsquo;s friend from Strixhaven.</li>
+      <li data-since="26"><b>Sterling Pemberton</b> &mdash; Strixhaven history professor. Came out with the party and never really left.</li>
+      <li data-since="31"><b>Brock</b> &mdash; an amethyst dragon. Lives at the keep. On our side.</li>
+      <li data-since="44"><b>Despona</b> &mdash; drow doctor and informant. Provided the map of the deep roads. Lives at Greenwatch under Steve&rsquo;s watch.</li>
+      <li data-since="24"><b>Terrick</b> &mdash; master artisan. Builds faster than the duchy can plan.</li>
+      <li data-since="24"><b>Mira</b> &mdash; painter. Working on the mural.</li>
+      <li data-since="42"><b>Phelban Shelkesha (&ldquo;Blue Corn&rdquo;)</b> &mdash; duergar informant under the duchy&rsquo;s protection.</li>
+      <li data-since="24"><b>Iroh</b> &mdash; with the party.</li>
       <li><b>Mila &amp; Thor</b> &mdash; a blink dog and a good boy.</li>
     </ul>
   </div>
@@ -194,14 +420,14 @@ main{padding:24px 18px}.standing-grid,.npc-grid{grid-template-columns:1fr}}
     <h3>The Army</h3>
     <p>Minnesota: the First Minnesota Volunteer Regiment, recruited from the overlooked across the whole continent, starting with the kobolds. (Minnesota is also the name of the heaven William described to them. They are working toward it.)</p>
     <ul>
-      <li><b>Boldwin the Bold</b> &mdash; the kobolds&rsquo; leader.</li>
-      <li><b>Rho Khetshypp</b> &mdash; lieutenant. Red dragonborn out of Ashbourne.</li>
-      <li><b>Aero Planes</b> &mdash; lieutenant and archer, out of Allfield. Hawk named Jett.</li>
-      <li><b>The Freeblade Commission</b> &mdash; mercenaries on retainer. Fifty gold a month and a house after a year. Mai Dovekin is stationed here with the detachment.</li>
+      <li data-since="18"><b>Boldwin the Bold</b> &mdash; the kobolds&rsquo; leader.</li>
+      <li data-since="27"><b>Rho Khetshypp</b> &mdash; lieutenant. Red dragonborn out of Ashbourne.</li>
+      <li data-since="27"><b>Aero Planes</b> &mdash; lieutenant and archer, out of Allfield. Hawk named Jett.</li>
+      <li data-since="37"><b>The Freeblade Commission</b> &mdash; mercenaries on retainer. Fifty gold a month and a house after a year. Mai Dovekin is stationed here with the detachment.</li>
     </ul>
   </div>
 
-  <div class="duchy-block">
+  <div class="duchy-block" data-since="34">
     <h3>The House Beneath the House</h3>
     <p>Under the dining room is a buried dwarven complex nobody knew about. In it: the chained ghosts of Marley and Marley, a bottomless pit bound in chains, an unfinished instrument missing its water parts, and a living root of the World Tree sitting on a node of the ley lines.</p>
     <p>The root is also a gate. Opened once, with the crystals. It showed the Seventh Circle. It is closed.</p>
@@ -216,9 +442,9 @@ main{padding:24px 18px}.standing-grid,.npc-grid{grid-template-columns:1fr}}
   <div class="duchy-block">
     <h3>Holdings &amp; Friends of the Duchy</h3>
     <ul>
-      <li><b>Richard&rsquo;s Vale</b> &mdash; governed by Ruffe and Florence, both elected. Home of the Rough and Tumble.</li>
-      <li><b>Cattlekeep</b> &mdash; held by Theodric and Nyssa Greylark in the party&rsquo;s name.</li>
-      <li><b>The Emberhold</b> &mdash; the dwarven hold and the party&rsquo;s allies. Thrain is High Mason. Chanticlear was theirs. The Emberhold dwarves work the nearby Stonebriar mines, where the tremors first led and the machine was found.</li>
+      <li data-since="35"><b>Richard&rsquo;s Vale</b> &mdash; governed by Ruffe and Florence, both elected. Home of the Rough and Tumble.</li>
+      <li data-since="23"><b>Cattlekeep</b> &mdash; held by Theodric and Nyssa Greylark in the party&rsquo;s name.</li>
+      <li data-since="26"><b>The Emberhold</b> &mdash; the dwarven hold and the party&rsquo;s allies. Thrain is High Mason. Chanticlear was theirs. The Emberhold dwarves work the nearby Stonebriar mines, where the tremors first led and the machine was found.</li>
     </ul>
   </div>
 </section>
@@ -386,76 +612,76 @@ const NPCS = [
 {name:"Nyssa Greylark", role:"Lady of Cattlekeep", where:"Cattlekeep", status:"alive", x:"Freed from Malachi's keeping."},
 {name:"Ruffe", role:"Co-leader of Richard's Vale; barkeep", where:"Richard's Vale", status:"alive", x:"Man of the people. Keeper of the Rough and Tumble, named for himself and his late wife."},
 {name:"Florence", role:"Co-leader of Richard's Vale", where:"Richard's Vale", status:"alive", x:"Political ambitions and strong opinions on single-family zoning. Elected fair and square."},
-{name:"Tumble", role:"Of the Rough and Tumble", where:"Richard's Vale", status:"dead", x:"Ruffe's wife, taken by the false hydra. Her name is still on the sign. Few remember why."},
+{name:"Tumble", role:"Of the Rough and Tumble", where:"Richard's Vale", status:"dead", diedAt:36, x:"Ruffe's wife, taken by the false hydra. Her name is still on the sign. Few remember why."},
 {name:"Jeffrey", role:"Leader of Richard's Vale", where:"—", status:"myth", x:"There is no Jeffrey. There never was."},
 {name:"The Kollosensteins", role:"Red's family; guardians of Easterlaque", where:"Easterlaque", status:"alive", x:"A towering clan of goliaths who have protected Easterlaque for generations. Relations with the duchy: complicated, but family."},
 {name:"Pumat Sol", role:"Proprietor, the Invulnerable Vagrant", where:"Zadash", status:"alive", x:"All of him."},
 {name:"The Knights of Requital", role:"Aggrieved citizens of Zadash", where:"Zadash", status:"unknown", x:"Finn, Dolan, and friends. Status of their cause: unresolved, as far as the party knows."},
-{name:"Clyde", role:"Red's uncle", where:"Cattlekeep", status:"dead", x:"Found at the Hook, Line and Sinker. Killed in Cattlekeep by Malachi. The vampire did not outlive him by much."},
-{name:"Tomas", role:"Barkeep of the Evening Nip", where:"Zadash", status:"dead", x:"Dead from the wish."},
-{name:"Squak", role:"Hawk", where:"—", status:"dead", x:"He was a good hawk."},
+{name:"Clyde", role:"Red's uncle", where:"Cattlekeep", status:"dead", diedAt:18, x:"Found at the Hook, Line and Sinker. Killed in Cattlekeep by Malachi. The vampire did not outlive him by much."},
+{name:"Tomas", role:"Barkeep of the Evening Nip", where:"Zadash", status:"dead", diedAt:20, x:"Dead from the wish."},
+{name:"Squak", role:"Hawk", where:"—", status:"dead", diedAt:16, x:"He was a good hawk."},
 {name:"Christina", role:"Tabaxi of the Clan of the Dead Eyes", where:"Home", status:"alive", x:"Made it back. Confirmed."},
-{name:"Chanticlear", role:"High mage of the Emberhold", where:"Emberhold", status:"dead", x:"Concluded Marleaux might be a lich. Murdered by drow while studying the enemy's machine."},
+{name:"Chanticlear", role:"High mage of the Emberhold", where:"Emberhold", status:"dead", diedAt:41, x:"Concluded Marleaux might be a lich. Murdered by drow while studying the enemy's machine."},
 {name:"Phelban Shelkesha ('Blue Corn')", role:"Duergar informant", where:"Under the duchy's protection", status:"alive", x:"Talked. Renamed. Watched over."},
 {name:"Grimshaw", role:"Devil; licensed agent", where:"The hells", status:"alive", x:"Arrived with paperwork. Left without a signature. Probably."},
 {name:"Velkora", role:"Devil of the Seventh Circle", where:"The Seventh Circle", status:"alive", x:"Holds Christopher's bargain and William's completed contract. Keeps her word. All of it."},
 {name:"Raphael", role:"Superior infernal, freed by Erik", where:"Whereabouts unknown", status:"unknown", x:"Owes a debt. Pays in red feathers, so far."},
 {name:"Velraen ('V')", role:"Power of the deep", where:"The Underdark", status:"alive", x:"Where the cold and power comes from. Stopped a heart by looking at it, the duergar say."},
-{name:"Thagram", role:"Duergar warlord of the dig", where:"The collapsed tunnel", status:"dead", x:"Commanded the machine. Did not escape the collapse."},
+{name:"Thagram", role:"Duergar warlord of the dig", where:"The collapsed tunnel", status:"dead", diedAt:45, x:"Commanded the machine. Did not escape the collapse."},
 {name:"Marleaux the Red", role:"Wizard; possibly more, possibly less alive", where:"Whereabouts unknown", status:"unknown", x:"Hosted dinner once, kindly. His moving tower burned and vanished. The Emberhold's theory: lich."},
-{name:"Wolfram Malachi", role:"Vampire lord of Cattlekeep", where:"—", status:"dead", x:"Ended in open daylight on the plains."},
-{name:"Titus reborn", role:"—", where:"—", status:"dead", x:"See: the wish. See also: the brother."},
+{name:"Wolfram Malachi", role:"Vampire lord of Cattlekeep", where:"—", status:"dead", diedAt:22, x:"Ended in open daylight on the plains."},
+{name:"Titus reborn", role:"—", where:"—", status:"dead", diedAt:20, x:"See: the wish. See also: the brother."},
 {name:"Sarah", role:"—", where:"Vanished from Richard's Vale", status:"unknown", x:"Four words and a sword left behind. 'I'm sorry, Red.'"},
 {name:"Cedric", role:"Tiefling performer", where:"Zadash", status:"alive", x:"Of the theater in the round. Not to be confused with Cedric."},
 {name:"Cedric", role:"Undead horseman", where:"Last seen at the dragons' gate", status:"unknown", x:"Dueled Red and earned his respect. Not to be confused with Cedric."}
 ];
 const VAULT = [
-{name:"The Crown of Greenwatch", prov:"Taken from the hoard of the green dragons of Greenwatch — Session 30 — by an invisible rabbit", holder:"Worn and attuned: William", x:"Forged by an archdevil and built to bend wills. Dominate Monster three times a day, poison to anyone who strikes the wearer, and a deeper enchantment nobody can read. Asmodeus feared it enough to kill its maker. There is more."},
-{name:"The Crown of Thorn and Blood", prov:"Taken from Wolfram Malachi's castle, Cattlekeep — Session 23 — 'to potentially use as a weapon'", holder:"Red's pack", x:"The vampire's crown. The quieter of the party's two crowns."},
-{name:"Nine Lives Stealer Greataxe", prov:"Red's arsenal", holder:"Red", x:"An axe with an appetite for souls and a countdown nobody has checked recently."},
-{name:"Bloodaxe", prov:"Red's arsenal", holder:"Red, attuned", x:"Necrotic edge. The working blade of the party's strongest arm. Red owns two."},
-{name:"Rapier of Wounding", prov:"William's side", holder:"William, attuned", x:"Glows while unsheathed, and the wounds keep arguing after the duel ends."},
-{name:"Ring of Mind Shielding", prov:"William's hand", holder:"William, attuned", x:"William's thoughts are his own."},
-{name:"The Hat of Glamour", prov:"William's wardrobe", holder:"William", x:"Disguise at a touch."},
-{name:"Boogie Boots & the Percussion of Movement", prov:"William's wardrobe", holder:"William", x:"The gear of the College of Dance. William fights in rhythm."},
-{name:"Staff of the Woodlands", prov:"Acquired in Zadash — Session 11", holder:"Erik, attuned", x:"Shillelagh, wall of thorns, and the whole road since. Regains two charges at dawn."},
-{name:"Cape of the Bat", prov:"Erik's shoulders", holder:"Erik, attuned", x:"Flight, feather fall, and extra stealth for a bird who already had plenty."},
-{name:"Amulet of Proof against Detection and Location", prov:"Erik's neck", holder:"Erik, attuned", x:"The root's caretaker can't be scried or located by magic."},
-{name:"Ring of CounterSpell", prov:"Erik's hand", holder:"Erik", x:"For when someone else's incantation needs to stop mid-sentence."},
-{name:"Duergar Resonance Shield", prov:"Claimed at the Stonebriar mines — Session 39", holder:"The party", x:"Deep-forged and faintly humming. A sample of the machine-makers' craft."},
-{name:"Longsword of Lawbrand", prov:"Found in a vanished woman's room, Richard's Vale — Session 37", holder:"The vault", x:"Left behind by Sarah, along with her spellbook and four words."},
-{name:"Sarah's Spellbook", prov:"Richard's Vale — Session 37", holder:"Red keeps it with the letter", x:"The working book of a fire evoker. Reads like someone who left in a hurry, or knew she wouldn't be back."},
-{name:"Du'Laq's Obsidian Daggers", prov:"Red's collection", holder:"Red", x:"Black glass, someone else's name."},
-{name:"Eyes of the Master of Languages", prov:"Red's collection", holder:"Red, attuned", x:"Every tongue on the continent, worn by the party member with the fewest words."},
-{name:"Erik's Scroll Workshop", prov:"Ongoing — magic ink, transcription gloves, and ambition", holder:"Erik", x:"Gloves of Immediate Transcription, twenty-odd measures of magic ink, and a growing shelf of scrolls up to ninth level. Erik is building the duchy's spell library by hand."},
-{name:"The Velkora Contract (Completed)", prov:"Signed at Greenwatch — Session 29; fulfilled — Session 32", holder:"On file; William keeps his copy", x:"The Gift of the Silver Tongue, restored, in exchange for one adult green dragon, delivered. Every word read before signing. Every word honored since. Signed: Velkora — Bureaucrat of Bound Pacts, Seductress of Subtext, Honorable Devil."},
-{name:"The Grimshaw Contract", prov:"Negotiated at Greenwatch — Session 29", holder:"Disposition uncertain", x:"The competing offer, from a licensed agent of the Ninth Infernal Bureau. Whether it was ever signed is an open question."}
+{name:"The Crown of Greenwatch", acqAt:30, prov:"Taken from the hoard of the green dragons of Greenwatch — Session 30 — by an invisible rabbit", holder:"Worn and attuned: William", x:"Forged by an archdevil and built to bend wills. Dominate Monster three times a day, poison to anyone who strikes the wearer, and a deeper enchantment nobody can read. Asmodeus feared it enough to kill its maker. There is more."},
+{name:"The Crown of Thorn and Blood", acqAt:23, prov:"Taken from Wolfram Malachi's castle, Cattlekeep — Session 23 — 'to potentially use as a weapon'", holder:"Red's pack", x:"The vampire's crown. The quieter of the party's two crowns."},
+{name:"Nine Lives Stealer Greataxe", acqAt:23, prov:"Red's arsenal", holder:"Red", x:"An axe with an appetite for souls and a countdown nobody has checked recently."},
+{name:"Bloodaxe", acqAt:19, prov:"Red's arsenal", holder:"Red, attuned", x:"Necrotic edge. The working blade of the party's strongest arm. Red owns two."},
+{name:"Rapier of Wounding", acqAt:21, prov:"William's side", holder:"William, attuned", x:"Glows while unsheathed, and the wounds keep arguing after the duel ends."},
+{name:"Ring of Mind Shielding", acqAt:11, prov:"William's hand", holder:"William, attuned", x:"William's thoughts are his own."},
+{name:"The Hat of Glamour", acqAt:25, prov:"William's wardrobe", holder:"William", x:"Disguise at a touch."},
+{name:"Boogie Boots & the Percussion of Movement", acqAt:6, prov:"William's wardrobe", holder:"William", x:"The gear of the College of Dance. William fights in rhythm."},
+{name:"Staff of the Woodlands", acqAt:11, prov:"Acquired in Zadash — Session 11", holder:"Erik, attuned", x:"Shillelagh, wall of thorns, and the whole road since. Regains two charges at dawn."},
+{name:"Cape of the Bat", acqAt:17, prov:"Erik's shoulders", holder:"Erik, attuned", x:"Flight, feather fall, and extra stealth for a bird who already had plenty."},
+{name:"Amulet of Proof against Detection and Location", acqAt:17, prov:"Erik's neck", holder:"Erik, attuned", x:"The root's caretaker can't be scried or located by magic."},
+{name:"Ring of CounterSpell", acqAt:11, prov:"Erik's hand", holder:"Erik", x:"For when someone else's incantation needs to stop mid-sentence."},
+{name:"Duergar Resonance Shield", acqAt:39, prov:"Claimed at the Stonebriar mines — Session 39", holder:"The party", x:"Deep-forged and faintly humming. A sample of the machine-makers' craft."},
+{name:"Longsword of Lawbrand", acqAt:37, prov:"Found in a vanished woman's room, Richard's Vale — Session 37", holder:"The vault", x:"Left behind by Sarah, along with her spellbook and four words."},
+{name:"Sarah's Spellbook", acqAt:37, prov:"Richard's Vale — Session 37", holder:"Red keeps it with the letter", x:"The working book of a fire evoker. Reads like someone who left in a hurry, or knew she wouldn't be back."},
+{name:"Du'Laq's Obsidian Daggers", acqAt:18, prov:"Red's collection", holder:"Red", x:"Black glass, someone else's name."},
+{name:"Eyes of the Master of Languages", acqAt:23, prov:"Red's collection", holder:"Red, attuned", x:"Every tongue on the continent, worn by the party member with the fewest words."},
+{name:"Erik's Scroll Workshop", acqAt:34, prov:"Ongoing — magic ink, transcription gloves, and ambition", holder:"Erik", x:"Gloves of Immediate Transcription, twenty-odd measures of magic ink, and a growing shelf of scrolls up to ninth level. Erik is building the duchy's spell library by hand."},
+{name:"The Velkora Contract (Completed)", acqAt:29, prov:"Signed at Greenwatch — Session 29; fulfilled — Session 32", holder:"On file; William keeps his copy", x:"The Gift of the Silver Tongue, restored, in exchange for one adult green dragon, delivered. Every word read before signing. Every word honored since. Signed: <span class=\"vksig\" id=\"vkledger-trigger\" role=\"button\" tabindex=\"0\" title=\"...\">Velkora — Bureaucrat of Bound Pacts, Seductress of Subtext, Honorable Devil.</span>"},
+{name:"The Grimshaw Contract", acqAt:29, prov:"Negotiated at Greenwatch — Session 29", holder:"Disposition uncertain", x:"The competing offer, from a licensed agent of the Ninth Infernal Bureau. Whether it was ever signed is an open question."}
 ];
 const RELIQUARY = [
-{name:"Sarah's Letter", prov:"Richard's Vale — Session 37", holder:"Red keeps it", x:"Four words. 'I'm sorry, Red. — Sarah.' Nothing since."},
-{name:"The Envelope from Thagram", prov:"The deep", holder:"Erik's pack", x:"An envelope from the warlord who didn't make it out of the tunnel."},
-{name:"Bruno's Dog Collar", prov:"—", holder:"Red's pack", x:"Nobody on record knows who Bruno is. Red does."},
-{name:"Instructions to Take Care of the Root of the Tree", prov:"Written by William — Session 35", holder:"Erik, who follows them", x:"One page, in William's hand, on the care and keeping of the most important living thing in the kingdom."},
-{name:"A Brown-and-White Feather", prov:"The road west — Session 16", holder:"Erik", x:"He was a good hawk."},
-{name:"Four Adult Green Dragon Claws", prov:"The battle for Greenwatch — Sessions 30–31", holder:"Red's pack", x:"What's left, on hand, of the keep's previous management."},
-{name:"The Drawn Cards", prov:"The Deck of Many Things — Session 20", holder:"Memory, mostly", x:"An enemy. A cottage. The ire of a devil. And one wish, spoken by a barkeep, that ended an age."},
-{name:"The Mephis— Monolith", prov:"Found on duchy land — the first weeks at Greenwatch", holder:"Where it stands", x:"A broken stone with half a name on it. The rest has been missing a long time."},
-{name:"The Red and Green Crystals", prov:"The root chamber — Sessions 34–35", holder:"Erik's keeping", x:"Keys, or warnings, or both. Red turns green under fire. The red ones feel, in Erik's words, 'connected to Velkora somehow.'"},
-{name:"Two Potions: Really Smart, Really Dumb", prov:"Acquired along the way", holder:"Red's pack", x:"One makes you really smart. One makes you really dumb. They look the same."},
-{name:"Monster Manual for Dummies", prov:"Red's library", holder:"Red", x:"Red is doing the reading."},
-{name:"The Wooden Sphere's Poem", prov:"The burned circle — Session 13", holder:"The party's records", x:"Found inside living wood at the center of a perfect circle of ash. Still unexplained."},
-{name:"The Brother's Letter", prov:"After the wish — Session 21", holder:"Erik", x:"What he knew, what he feared, and where he left the map. With a man. Not a man. A monster."}
+{name:"Sarah's Letter", acqAt:37, prov:"Richard's Vale — Session 37", holder:"Red keeps it", x:"Four words. 'I'm sorry, Red. — Sarah.' Nothing since."},
+{name:"The Envelope from Thagram", acqAt:43, prov:"The deep", holder:"Erik's pack", x:"An envelope from the warlord who didn't make it out of the tunnel."},
+{name:"Bruno's Dog Collar", acqAt:1, prov:"—", holder:"Red's pack", x:"Nobody on record knows who Bruno is. Red does."},
+{name:"Instructions to Take Care of the Root of the Tree", acqAt:35, prov:"Written by William — Session 35", holder:"Erik, who follows them", x:"One page, in William's hand, on the care and keeping of the most important living thing in the kingdom."},
+{name:"A Brown-and-White Feather", acqAt:16, prov:"The road west — Session 16", holder:"Erik", x:"He was a good hawk."},
+{name:"Four Adult Green Dragon Claws", acqAt:31, prov:"The battle for Greenwatch — Sessions 30–31", holder:"Red's pack", x:"What's left, on hand, of the keep's previous management."},
+{name:"The Drawn Cards", acqAt:20, prov:"The Deck of Many Things — Session 20", holder:"Memory, mostly", x:"An enemy. A cottage. The ire of a devil. And one wish, spoken by a barkeep, that ended an age."},
+{name:"The Mephis— Monolith", acqAt:24, prov:"Found on duchy land — the first weeks at Greenwatch", holder:"Where it stands", x:"A broken stone with half a name on it. The rest has been missing a long time."},
+{name:"The Red and Green Crystals", acqAt:34, prov:"The root chamber — Sessions 34–35", holder:"Erik's keeping", x:"Keys, or warnings, or both. Red turns green under fire. The red ones feel, in Erik's words, 'connected to Velkora somehow.'"},
+{name:"Two Potions: Really Smart, Really Dumb", acqAt:13, prov:"Acquired along the way", holder:"Red's pack", x:"One makes you really smart. One makes you really dumb. They look the same."},
+{name:"Monster Manual for Dummies", acqAt:12, prov:"Red's library", holder:"Red", x:"Red is doing the reading."},
+{name:"The Wooden Sphere's Poem", acqAt:13, prov:"The burned circle — Session 13", holder:"The party's records", x:"Found inside living wood at the center of a perfect circle of ash. Still unexplained."},
+{name:"The Brother's Letter", acqAt:21, prov:"After the wish — Session 21", holder:"Erik", x:"What he knew, what he feared, and where he left the map. With a man. Not a man. A monster."}
 ];
 const CLUES = [
-{t:"I'm Sorry, Red", q:"'I'm sorry, Red. — Sarah'", x:"Who is Sarah, what was she to Red, and what was she sorry for? A fire evoker's sword and spellbook left behind, a town that forgot her, and a letter that remembered."},
-{t:"The Crown's Second Sentence", q:"'That's all I can tell you. But there's more.'", x:"The crown carries an enchantment deeper than any mortal reading. Only a devil or a god could explain it. Neither has been asked. Yet."},
-{t:"Why, and By Whom", q:"'It seems to have been a trap. We do not know why or by who.'", x:"The party's own note on taking the crown. Someone wanted it taken, or wanted it found. Still unanswered since Session 30."},
-{t:"The Mephis— Monolith", q:"Half a name on broken stone", x:"Standing on duchy land, older than the duchy, older than the kingdom. What did the missing half spell?"},
-{t:"The Absence", q:"No Alistair at court", x:"Alistair was absent from the royal court. No word since."},
-{t:"The Others Above Velraen", q:"'Including Marleaux. But not limited to.'", x:"The duergar named a hierarchy with its top in shadow. Thagram served Velraen. Velraen serves... whom?"},
-{t:"The Chained Pit", q:"'Another dimension. Void, or the hells.'", x:"A bottomless hole beneath the keep, bound in chains older than memory. Even Silvanus wouldn't name its far end."},
-{t:"The Unfinished Instrument", q:"'No forgefire without a song'", x:"A great instrument in the deep complex, missing its water parts, beside a pool, beside the founders' bones. Built to be played. Never finished. Or never restarted."},
-{t:"The Keeper's Touch", q:"'Here labored the crew of Master Delruk, Fifth Keeper of the Root'", x:"The walls beneath Greenwatch use a familiar title, a thousand years before Titus stole it. Nobody has pulled this thread yet."}
+{t:"I'm Sorry, Red", sinceAt:37, q:"'I'm sorry, Red. — Sarah'", x:"Who is Sarah, what was she to Red, and what was she sorry for? A fire evoker's sword and spellbook left behind, a town that forgot her, and a letter that remembered."},
+{t:"The Crown's Second Sentence", sinceAt:31, q:"'That's all I can tell you. But there's more.'", x:"The crown carries an enchantment deeper than any mortal reading. Only a devil or a god could explain it. Neither has been asked. Yet."},
+{t:"Why, and By Whom", sinceAt:30, q:"'It seems to have been a trap. We do not know why or by who.'", x:"The party's own note on taking the crown. Someone wanted it taken, or wanted it found. Still unanswered since Session 30."},
+{t:"The Mephis— Monolith", sinceAt:24, q:"Half a name on broken stone", x:"Standing on duchy land, older than the duchy, older than the kingdom. What did the missing half spell?"},
+{t:"The Absence", sinceAt:46, q:"No Alistair at court", x:"Alistair was absent from the royal court. No word since."},
+{t:"The Others Above Velraen", sinceAt:40, q:"'Including Marleaux. But not limited to.'", x:"The duergar named a hierarchy with its top in shadow. Thagram served Velraen. Velraen serves... whom?"},
+{t:"The Chained Pit", sinceAt:34, q:"'Another dimension. Void, or the hells.'", x:"A bottomless hole beneath the keep, bound in chains older than memory. Even Silvanus wouldn't name its far end."},
+{t:"The Unfinished Instrument", sinceAt:34, q:"'No forgefire without a song'", x:"A great instrument in the deep complex, missing its water parts, beside a pool, beside the founders' bones. Built to be played. Never finished. Or never restarted."},
+{t:"The Keeper's Touch", sinceAt:34, q:"'Here labored the crew of Master Delruk, Fifth Keeper of the Root'", x:"The walls beneath Greenwatch use a familiar title, a thousand years before Titus stole it. Nobody has pulled this thread yet."}
 ];
 
 /* ---------- render ---------- */
@@ -507,27 +733,27 @@ function renderNpcs(){
 }
 renderNpcs();
 VAULT.forEach(v=>$('#vault-list').appendChild(el(
-  `<div class="plaque"><h4>${v.name}</h4><div class="prov">${v.prov}</div><p>${v.x}</p><div class="holder">${v.holder}</div></div>`)));
+  `<div class="plaque" data-acq="${v.acqAt||1}"><h4>${v.name}</h4><div class="prov">${v.prov}</div><p>${v.x}</p><div class="holder">${v.holder}</div></div>`)));
 RELIQUARY.forEach(v=>$('#reliquary-list').appendChild(el(
-  `<div class="plaque" style="border-top-color:var(--seal)"><h4 style="color:var(--vellum)">${v.name}</h4><div class="prov">${v.prov}</div><p>${v.x}</p><div class="holder">${v.holder}</div></div>`)));
+  `<div class="plaque" data-acq="${v.acqAt||1}" style="border-top-color:var(--seal)"><h4 style="color:var(--vellum)">${v.name}</h4><div class="prov">${v.prov}</div><p>${v.x}</p><div class="holder">${v.holder}</div></div>`)));
 CLUES.forEach(c=>$('#clue-list').appendChild(el(
-  `<div class="clue"><h4>${c.t}</h4><div class="quote">${c.q}</div><p>${c.x}</p></div>`)));
+  `<div class="clue" data-since="${c.sinceAt||1}"><h4>${c.t}</h4><div class="quote">${c.q}</div><p>${c.x}</p></div>`)));
 
 /* MAP SPOTS — x/y are percentages of the map image. visited: true = gold, false = grey.
    To add a place: copy a line, adjust coordinates by eye (x left-to-right, y top-to-bottom). */
 const MAPSPOTS = [
-{name:"Greenwatch Keep", x:36.15, y:45.74, visited:true, blurb:"Seat of the party. Taken from two green dragons and built up ever since. The root, the node, and the house beneath the house all sit below it. The way into the Underdark is nearby."},
-{name:"Richard's Vale", x:39.90, y:41.11, visited:true, blurb:"Duchy town run by Ruffe and Florence. Home of the Rough and Tumble. Site of the false hydra."},
+{name:"Greenwatch Keep", x:36.15, y:45.74, visited:true, reached:24, blurb:"Seat of the party. Taken from two green dragons and built up ever since. The root, the node, and the house beneath the house all sit below it. The way into the Underdark is nearby."},
+{name:"Richard's Vale", x:39.90, y:41.11, visited:true, reached:24, blurb:"Duchy town run by Ruffe and Florence. Home of the Rough and Tumble. Site of the false hydra."},
 {name:"Richard's Peak", x:43.23, y:44.81, visited:false, blurb:"Named for the same old king as the Vale. The party hasn't been."},
-{name:"Emberhold", x:30.31, y:48.70, visited:true, blurb:"The dwarven hold and the party's allies. Thrain is High Mason; Chanticlear was theirs. The Emberhold dwarves work the Stonebriar mines nearby, where the tremors first led and the machine was found."},
+{name:"Emberhold", x:30.31, y:48.70, visited:true, reached:26, blurb:"The dwarven hold and the party's allies. Thrain is High Mason; Chanticlear was theirs. The Emberhold dwarves work the Stonebriar mines nearby, where the tremors first led and the machine was found."},
 {name:"The Hearthgrove Vale", x:26.88, y:54.44, visited:false, blurb:"On the map. Not yet in the story."},
 {name:"Knightsroost", x:38.65, y:54.81, visited:false, blurb:"On the map. Not yet in the story."},
-{name:"The Eternal City", x:38.75, y:65.00, visited:true, blurb:"The Capital. Seat of King Aleric Valethorn the 5th and the Throne of Power. The party has stood before it twice."},
-{name:"Easterlaque", x:50.94, y:47.59, visited:true, blurb:"Lakeside town where it all started. The circus, the deviltoad, and the Kollosensteins, Red's family, who guard it."},
-{name:"Zadash", x:49.90, y:32.04, visited:true, blurb:"The great city of the east. The Evening Nip, the Tri-Spires, Pumat Sol, and the night the roots came."},
-{name:"Allfield", x:56.15, y:36.30, visited:true, blurb:"Gnoll battle alongside the Crownsguard, and the academy where Shadow was found. Aero Planes' hometown."},
+{name:"The Eternal City", x:38.75, y:65.00, visited:true, reached:24, blurb:"The Capital. Seat of King Aleric Valethorn the 5th and the Throne of Power. The party has stood before it twice."},
+{name:"Easterlaque", x:50.94, y:47.59, visited:true, reached:1, blurb:"Lakeside town where it all started. The circus, the deviltoad, and the Kollosensteins, Red's family, who guard it."},
+{name:"Zadash", x:49.90, y:32.04, visited:true, reached:4, blurb:"The great city of the east. The Evening Nip, the Tri-Spires, Pumat Sol, and the night the roots came."},
+{name:"Allfield", x:56.15, y:36.30, visited:true, reached:3, blurb:"Gnoll battle alongside the Crownsguard, and the academy where Shadow was found. Aero Planes' hometown."},
 {name:"Wind Hill", x:64.27, y:28.52, visited:false, blurb:"On the map. Not yet in the story."},
-{name:"Cattlekeep", x:66.25, y:48.33, visited:true, blurb:"The Buffalo lands' great fort, freed from Malachi. Held by Theodric and Nyssa in the party's name."},
+{name:"Cattlekeep", x:66.25, y:48.33, visited:true, reached:18, blurb:"The Buffalo lands' great fort, freed from Malachi. Held by Theodric and Nyssa in the party's name."},
 {name:"Greenhill Glade", x:75.94, y:45.00, visited:false, blurb:"On the map. Not yet in the story."},
 {name:"Ashborne", x:79.27, y:72.22, visited:false, blurb:"Rho Khetshypp's home village, out in the Buffalo lands."},
 {name:"Pear Cities", x:44.17, y:75.37, visited:false, blurb:"Cities of the south. Clyde once headed this way."},
@@ -580,6 +806,239 @@ DEEPNODES.forEach(n=>{
   g.addEventListener('keypress',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();sel();}});
   dm.appendChild(g);
 });
+
+/* ---- TEMPORAL SLIDER ---- */
+(function(){
+  const range=document.getElementById('tsrange'), valEl=document.getElementById('tsval');
+  const NOW=46;
+  function statusAsOf(n, who){
+    // who: {status, diedAt}. Returns the status string to show as of session n.
+    if(who.diedAt && n < who.diedAt) return 'alive';
+    return who.status;
+  }
+  function apply(n){
+    valEl.textContent = (n>=NOW) ? 'Session 46 — Now' : 'Session '+n;
+    // CHRONICLE: hide entries after n
+    document.querySelectorAll('#chronicle-list .entry').forEach(e=>{
+      const num=+e.querySelector('.num').textContent.replace(/\D/g,'');
+      e.style.display = (num<=n)?'':'none';
+    });
+    document.querySelectorAll('#chronicle-list .actband, #chronicle-list .thread').forEach(()=>{});
+    // MAP markers: visited only if reached by n
+    document.querySelectorAll('#mapwrap .spot').forEach((el,i)=>{
+      const s=MAPSPOTS[i]; if(!s)return;
+      const reachedYet = s.reached && n>=s.reached;
+      if(s.visited){
+        el.classList.toggle('visited', reachedYet);
+        el.classList.toggle('unvisited', !reachedYet);
+      }
+    });
+    // DEEP map: all deep travel is current-era (43+), so fade all if n<43
+    document.querySelectorAll('.deepmap .dn-visited').forEach(g=>{
+      g.style.opacity = (n>=43)?'':'0.3';
+    });
+    // VAULT + RELIQUARY: hide items not yet acquired
+    document.querySelectorAll('#vault-list .plaque, #reliquary-list .plaque').forEach(p=>{
+      const acq=+p.getAttribute('data-acq')||1;
+      p.style.display = (acq<=n)?'':'none';
+    });
+    // DUCHY page: fade elements not yet true
+    document.querySelectorAll('#duchy [data-since]').forEach(elm=>{
+      const since=+elm.getAttribute('data-since')||1;
+      elm.style.display = (since<=n)?'':'none';
+    });
+    // LIVING SCENE: dragons/banner/kobolds by session
+    if(window.__gwSceneState) window.__gwSceneState(n);
+    // CLUE BOARD: hide clues not yet discovered
+    document.querySelectorAll('#clue-list .clue').forEach(c=>{
+      const since=+c.getAttribute('data-since')||1;
+      c.style.display=(since<=n)?'':'none';
+    });
+    // COMPENDIUM: recompute status dot + 'as of' note
+    document.querySelectorAll('#npc-list .npc').forEach((card,i)=>{
+      const data=window.__NPCREF[i]; if(!data)return;
+      const st=statusAsOf(n,data);
+      const dot=card.querySelector('.dot');
+      dot.className='dot '+st;
+      card.classList.toggle('ts-faded', data.diedAt && n>=data.diedAt ? false : false);
+    });
+  }
+  range.addEventListener('input',()=>apply(+range.value));
+  // expose NPC ref for status recompute
+  window.__NPCREF = NPCS;
+  apply(46);
+})();
+
+/* ---- VELKORA'S LEDGER (easter egg) ---- */
+(function(){
+  function bg(){return document.getElementById('vkmodal-bg');}
+  function open(){const b=bg();if(b){b.classList.add('open');b.setAttribute('aria-hidden','false');}}
+  function shut(){const b=bg();if(b){b.classList.remove('open');b.setAttribute('aria-hidden','true');}}
+  // All binding via delegation so nothing is referenced before it exists.
+  document.addEventListener('click',e=>{
+    const t=e.target;
+    if(!t)return;
+    if(t.id==='vkledger-trigger'){open();return;}
+    if(t.id==='vkclose'){shut();return;}
+    if(t.id==='vkmodal-bg'){shut();return;}
+  });
+  document.addEventListener('keydown',e=>{
+    if(e.target&&e.target.id==='vkledger-trigger'&&(e.key==='Enter'||e.key===' ')){e.preventDefault();open();}
+    if(e.key==='Escape')shut();
+  });
+})();
+
+/* ---- LIVING GREENWATCH: real-clock daylight + slider state ---- */
+(function(){
+  const scene=document.getElementById('gwscene');
+  if(!scene)return;
+  const ST_LAT=44.95, ST_LNG=-93.09;
+  // crude but seasonally-correct sunrise/sunset (local hours) for St Paul
+  function dayInfo(now){
+    const start=new Date(now.getFullYear(),0,0);
+    const n=Math.floor((now-start)/86400000);
+    const decl=-23.45*Math.cos((Math.PI/180)*(360/365*(n+10)));
+    const latR=ST_LAT*Math.PI/180, decR=decl*Math.PI/180;
+    let x=-Math.tan(latR)*Math.tan(decR);
+    x=Math.max(-1,Math.min(1,x));
+    const ha=Math.acos(x)*180/Math.PI; // degrees
+    const halfDay=ha/15; // hours
+    // solar noon ~ 13:07 local for St Paul (CDT, lng offset); approximate 13.1
+    const noon=13.1;
+    return {sunrise:noon-halfDay, sunset:noon+halfDay, noon};
+  }
+  function setSky(){
+    const now=new Date();
+    const h=now.getHours()+now.getMinutes()/60;
+    const {sunrise,sunset,noon}=dayInfo(now);
+    const top=document.getElementById('sky-top'), bot=document.getElementById('sky-bot');
+    const orb=document.getElementById('gw-orb'), core=document.getElementById('gw-orb-core');
+    const stars=document.getElementById('gw-stars');
+    // phase: 0 deep night .. 1 full day
+    let lit;
+    const dawn0=sunrise-1, dawn1=sunrise+1, dusk0=sunset-1, dusk1=sunset+1;
+    if(h<=dawn0||h>=dusk1){ // night
+      top.setAttribute('stop-color','#0b1020'); bot.setAttribute('stop-color','#141528');
+      stars.setAttribute('opacity','0.9'); lit=true;
+      // moon
+      orb.setAttribute('fill','url(#gw-moon)'); core.setAttribute('fill','#eef2f7');
+    } else if(h<dawn1){ // dawn
+      top.setAttribute('stop-color','#26324f'); bot.setAttribute('stop-color','#c98a5a');
+      stars.setAttribute('opacity','0.25'); lit=true;
+      orb.setAttribute('fill','url(#gw-sun)'); core.setAttribute('fill','#fff0cc');
+    } else if(h<=dusk0){ // day
+      top.setAttribute('stop-color','#2f5c86'); bot.setAttribute('stop-color','#a9c2cf');
+      stars.setAttribute('opacity','0'); lit=false;
+      orb.setAttribute('fill','url(#gw-sun)'); core.setAttribute('fill','#fff7e0');
+    } else { // dusk
+      top.setAttribute('stop-color','#243049'); bot.setAttribute('stop-color','#d4884e');
+      stars.setAttribute('opacity','0.3'); lit=true;
+      orb.setAttribute('fill','url(#gw-sun)'); core.setAttribute('fill','#ffcaa0');
+    }
+    scene.classList.toggle('lit', lit);
+    // arc the orb across the sky between sunrise and sunset
+    const frac=Math.max(0,Math.min(1,(h-sunrise)/(sunset-sunrise)));
+    const cx=80+frac*840;
+    const cy=320-Math.sin(frac*Math.PI)*285; // arc up, clears the keep
+    let oy=cy, ocx=cx;
+    if(h<sunrise||h>sunset){ // moon: opposite arc, simple
+      const nf=((h<sunrise?h+24:h)-sunset)/((sunrise+24)-sunset);
+      const f2=Math.max(0,Math.min(1,nf));
+      ocx=80+f2*840; oy=315-Math.sin(f2*Math.PI)*250;
+    }
+    orb.setAttribute('cx',ocx); orb.setAttribute('cy',oy);
+    core.setAttribute('cx',ocx); core.setAttribute('cy',oy);
+  }
+  setSky();
+  setInterval(setSky,60000); // update each minute
+
+  // ---- slider state: dragons (pre-30), banner+kobolds (post-grant) ----
+  window.__gwSceneState=function(n){
+    const scene=document.getElementById('gwscene');
+    const dragons=document.getElementById('gw-dragons');
+    const banner=document.getElementById('gw-banner');
+    const kobolds=document.getElementById('gw-kobolds');
+    const cap=document.getElementById('gw-caption');
+    if(dragons) dragons.setAttribute('opacity', n<30?'1':'0');
+    if(banner) banner.setAttribute('opacity', n>=24?'1':'0');
+    if(kobolds) kobolds.setAttribute('opacity', n>=30?'1':'0');
+    if(cap) cap.textContent = n<24 ? 'Greenwatch — held by dragons' : (n<30 ? 'Greenwatch — the taking' : 'Greenwatch');
+    scene.classList.toggle('held', n>=24);
+  };
+  window.__gwSceneState(46);
+})();
+
+/* ---- SEASONS (driven by real date) ---- */
+(function(){
+  const scene=document.getElementById('gwscene'); if(!scene)return;
+  function season(m){ // 0=Jan..11=Dec, Northern hemisphere
+    if(m<=1||m===11) return 'winter';
+    if(m<=4) return 'spring';
+    if(m<=7) return 'summer';
+    return 'autumn';
+  }
+  function rand(a,b){return a+Math.random()*(b-a);}
+  function spawnSnow(g){
+    let f='';
+    for(let i=0;i<34;i++){const x=rand(0,1000),d=rand(7,16),delay=rand(0,d),r=rand(1,2.2);
+      f+=`<circle cx="${x}" cy="-10" r="${r}" fill="#dfeaf2" opacity="0.85"><animate attributeName="cy" values="-10;250" dur="${d}s" begin="-${delay}s" repeatCount="indefinite"/><animate attributeName="cx" values="${x};${x+rand(-30,30)};${x}" dur="${d}s" begin="-${delay}s" repeatCount="indefinite"/></circle>`;}
+    g.innerHTML=f;
+  }
+  function spawnLeaves(g){
+    let f='';
+    for(let i=0;i<18;i++){const x=rand(0,1000),d=rand(9,16),delay=rand(0,d);
+      f+=`<path d="M0,0 q3,-3 6,0 q-3,3 -6,0z" fill="${['#a8642e','#8a4a22','#c08038'][i%3]}" opacity="0.8"><animate attributeName="transform" attributeType="XML" type="translate" values="${x},-10;${x+rand(-60,60)},240" dur="${d}s" begin="-${delay}s" repeatCount="indefinite" additive="sum"/><animateTransform attributeName="transform" type="rotate" values="0;360" dur="${rand(3,6)}s" begin="-${delay}s" repeatCount="indefinite" additive="sum"/></path>`;}
+    g.innerHTML=f;
+  }
+  function spawnFireflies(g){
+    let f='';
+    for(let i=0;i<14;i++){const x=rand(60,940),y=rand(150,225),d=rand(3,6),delay=rand(0,d);
+      f+=`<circle cx="${x}" cy="${y}" r="1.6" fill="#ffe9a0"><animate attributeName="opacity" values="0;1;0" dur="${d}s" begin="-${delay}s" repeatCount="indefinite"/><animate attributeName="cy" values="${y};${y-rand(8,20)};${y}" dur="${rand(6,10)}s" begin="-${delay}s" repeatCount="indefinite"/></circle>`;}
+    g.innerHTML=f;
+  }
+  window.__gwSeason=function(){
+    const s=season(new Date().getMonth());
+    const snow=document.getElementById('gw-snow'),leaves=document.getElementById('gw-leaves'),fire=document.getElementById('gw-fireflies');
+    snow.innerHTML='';leaves.innerHTML='';fire.innerHTML='';
+    // treeline + ground tint via CSS classes
+    scene.classList.remove('s-winter','s-spring','s-summer','s-autumn');
+    scene.classList.add('s-'+s);
+    if(s==='winter') spawnSnow(snow);
+    else if(s==='autumn') spawnLeaves(leaves);
+    else if(s==='summer'){ // fireflies only show at dusk/night (when .lit)
+      spawnFireflies(fire);
+    }
+  };
+  window.__gwSeason();
+})();
 </script>
+
+<div class="vkmodal-bg" id="vkmodal-bg" aria-hidden="true">
+  <div class="vkmodal" role="dialog" aria-label="A devil's ledger">
+    <button class="vkclose" id="vkclose" aria-label="Close">&times;</button>
+    <div class="vkmodal-head">
+      <div class="vk-eyebrow">Found between the lines of a signature</div>
+      <h2>An Account, Kept in a Cold Hand</h2>
+      <p class="vk-sub">Thirty-Ninth Table &middot; Reviewed at the Lady&rsquo;s leisure</p>
+    </div>
+    <div class="vk-ledger">
+      <div class="vk-entry"><span class="vk-acct">THE HASENPFEFFER AGREEMENT</span><span class="vk-stat paid">PAID IN FULL</span>
+        <p>The Gift of the Silver Tongue, restored. One adult green dragon, rendered. Concluded honorably, to the letter.</p>
+        <p class="vk-margin">Margin, in her hand: <i>the rabbit reads every line before he signs. A rare and irritating courtesy.</i></p></div>
+      <div class="vk-entry"><span class="vk-acct">THE MATTER OF THE CROWN</span><span class="vk-stat open">BALANCE UNRESOLVED</span>
+        <p>One dragon, delivered. One crown, declined. The party keeps what was not theirs to keep.</p>
+        <p class="vk-margin">Margin: <i>I asked once, and was refused. I am patient with those who interest me. They have made themselves interesting.</i></p></div>
+      <div class="vk-entry"><span class="vk-acct">GOODWILL, EXTENDED</span><span class="vk-stat fav">NOTED</span>
+        <p>One second dragon, removed from the board by the Lady&rsquo;s own hand, unbilled. Filed under courtesy.</p>
+        <p class="vk-margin">Margin: <i>a gift given is still an entry made. They will not remember that they owe me. I will.</i></p></div>
+      <div class="vk-entry"><span class="vk-acct">A NOTE ON THE NATURE OF FAVORS</span><span class="vk-stat rule">STANDING TERMS</span>
+        <p>A favor refused carries no debt and no insult. A favor accepted is a line in this book. The Lady keeps her word. All of it. She keeps her accounts the same way.</p></div>
+      <div class="vk-entry vk-fade"><span class="vk-acct">&mdash;&mdash;&mdash;</span>
+        <p class="vk-margin">A further entry begins here in a finer hand, and is struck through before it finishes. What remains legible is only: <i>&ldquo;...the younger one, when the time is&rdquo;</i> &mdash; the rest scored out, deliberately, twice.</p></div>
+    </div>
+    <div class="vk-foot">These are the pages she left where they might be found. She did not leave the others.</div>
+  </div>
+</div>
+
 </body>
 </html>
