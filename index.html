@@ -864,15 +864,23 @@ function renderNpcs(){
 }
 renderNpcs();
 VAULT.forEach(v=>{
-  const node=el(`<div class="plaque${v.img?' hasimg':''}" data-acq="${v.acqAt||1}">${v.img?`<img class="vimg" src="img/vault/${v.img}.jpg" alt="${v.name}" loading="lazy">`:''}<div class="plaque-body"><h4>${v.name}</h4><div class="prov">${v.prov}</div><p>${v.x}</p><div class="holder">${v.holder}</div></div></div>`);
+  const node=el(`<div class="plaque${v.img?' hasimg':''}" data-acq="${v.acqAt||1}">${v.img?`<img class="vimg" src="img/vault/${v.img}.jpg" data-base="img/vault/${v.img}" data-tried="jpg" alt="${v.name}" loading="lazy">`:''}<div class="plaque-body"><h4>${v.name}</h4><div class="prov">${v.prov}</div><p>${v.x}</p><div class="holder">${v.holder}</div></div></div>`);
   const im=node.querySelector('.vimg');
-  if(im){im.addEventListener('error',()=>{node.classList.remove('hasimg');im.remove();});}
+  if(im){im.addEventListener('error',()=>{
+    const tried=im.getAttribute('data-tried'), base=im.getAttribute('data-base');
+    if(tried==='jpg'){im.setAttribute('data-tried','png');im.src=base+'.png';}
+    else{node.classList.remove('hasimg');im.remove();}
+  });}
   $('#vault-list').appendChild(node);
 });
 RELIQUARY.forEach(v=>{
-  const node=el(`<div class="plaque${v.img?' hasimg':''}" data-acq="${v.acqAt||1}" style="border-top-color:var(--seal)">${v.img?`<img class="vimg" src="img/vault/${v.img}.jpg" alt="${v.name}" loading="lazy">`:''}<div class="plaque-body"><h4 style="color:var(--vellum)">${v.name}</h4><div class="prov">${v.prov}</div><p>${v.x}</p><div class="holder">${v.holder}</div></div></div>`);
+  const node=el(`<div class="plaque${v.img?' hasimg':''}" data-acq="${v.acqAt||1}" style="border-top-color:var(--seal)">${v.img?`<img class="vimg" src="img/vault/${v.img}.jpg" data-base="img/vault/${v.img}" data-tried="jpg" alt="${v.name}" loading="lazy">`:''}<div class="plaque-body"><h4 style="color:var(--vellum)">${v.name}</h4><div class="prov">${v.prov}</div><p>${v.x}</p><div class="holder">${v.holder}</div></div></div>`);
   const im=node.querySelector('.vimg');
-  if(im){im.addEventListener('error',()=>{node.classList.remove('hasimg');im.remove();});}
+  if(im){im.addEventListener('error',()=>{
+    const tried=im.getAttribute('data-tried'), base=im.getAttribute('data-base');
+    if(tried==='jpg'){im.setAttribute('data-tried','png');im.src=base+'.png';}
+    else{node.classList.remove('hasimg');im.remove();}
+  });}
   $('#reliquary-list').appendChild(node);
 });
 CLUES.forEach(c=>$('#clue-list').appendChild(el(
