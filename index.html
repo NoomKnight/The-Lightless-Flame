@@ -291,7 +291,7 @@ main{padding:24px 18px}.standing-grid,.npc-grid{grid-template-columns:1fr}}
   <button data-view="vault">The Vault</button>
   <button data-view="clues">The Clue Board</button>
   <button data-view="maps">The Maps</button>
-  <div class="foot">Archive current through Session 46.<br>Maintained by the duchy.<br>The library remembers.</div>
+  <div class="foot">Archive current through Session 47.<br>Maintained by the duchy.<br>The library remembers.</div>
 </nav>
 <main>
 
@@ -470,8 +470,8 @@ main{padding:24px 18px}.standing-grid,.npc-grid{grid-template-columns:1fr}}
   <div class="eyebrow">The State of Things</div>
   <h2 class="page">Where We Stand</h2>
   <div class="timescope" id="timescope">
-  <div class="ts-head"><span class="ts-label">Viewing the duchy as of</span> <span class="ts-val" id="tsval">Session 46 — Now</span></div>
-  <input type="range" id="tsrange" min="1" max="46" value="46" step="1" aria-label="Campaign session slider">
+  <div class="ts-head"><span class="ts-label">Viewing the duchy as of</span> <span class="ts-val" id="tsval">Session 47 — Now</span></div>
+  <input type="range" id="tsrange" min="1" max="47" value="46" step="1" aria-label="Campaign session slider">
   <div class="ts-sub">Drag back through two years of history. The map, the chronicle, and the people all remember where they were.</div>
 </div>
   <div class="standing-grid">
@@ -479,12 +479,15 @@ main{padding:24px 18px}.standing-grid,.npc-grid{grid-template-columns:1fr}}
       <p class="big">The Mighty Morphin&rsquo; Power Rangers</p>
       <p style="margin-top:6px;color:var(--vellum-dim)">William Hasenpfeffer &mdash; Harengon Bard 12, College of Dance<br>Red the Colossus &mdash; Goliath Barbarian 12, Path of the Berserker<br>Erik &mdash; Ravenfolk Druid 12, Circle of the Moon</p></div>
     <div class="card"><h3>Next Session</h3>
-      <p class="big">June 21, 2026</p>
-      <p style="margin-top:6px;color:var(--vellum-dim)">Session 47 &middot; Greenwatch</p></div>
+      <p class="big">Session 48</p>
+      <p style="margin-top:6px;color:var(--vellum-dim)">Knightsroost, and the road to the dark</p></div>
   </div>
   <div class="card"><h3>Active Threads</h3>
     <ul>
-      <li>Six hundred settlers are on the road to Greenwatch, along with 25,000 gold and royal specialists granted by King Aleric Valethorn the 5th.</li>
+      <li>Beneath the keep, the World Tree root has gone grey and cold. The node is dying, and the great Tree is pouring itself out to keep it alive &mdash; the source of the rumbling. The root can be steadied, but not healed, until the source is stopped from below.</li>
+      <li>The root named what it fears: a devil, and her minions &mdash; the drow, and the red one. The party reads the road downward.</li>
+      <li>The first settlers have arrived. The duchy is building &mdash; taverns, a school, a theater, homes &mdash; with the crown&rsquo;s gold and a writ for six hundred souls.</li>
+      <li>A letter from Velkora reached William by courier: her boons offered freely, once a season, for no named price. A signet he had left behind, returned.</li>
       <li>By duergar testimony: Thagram answered to Velraen, and above her there are others. &ldquo;Including Marleaux. But not limited to.&rdquo;</li>
       <li>Alistair Von Zeigaster was absent from the royal court. No word since.</li>
       <li>Red&rsquo;s letter from Sarah is still four words long.</li>
@@ -717,6 +720,7 @@ const SESSIONS = [
 {n:43, act:4, t:"Into the Underdark", d:"Jan 2026", x:"Down the trapped tunnel and through an illusory wall into the Underdark. William's drow disguise barely survives the local etiquette. He turns Red into a rat and pockets him; Red escapes the pocket and goes exploring on his own."},
 {n:44, act:4, t:"Tal'Tutin", d:"Jan 2026", x:"The party befriends a purple worm the size of a river. Its name is Tal'Tutin."},
 {n:45, act:4, t:"The Collapse", d:"Jan 2026", x:"The party escapes the collapsing tunnel. Thagram, notably, does not."},
+{n:47, act:4, t:"What Still Moves Beneath", d:"Jun 2026", x:"Home to a duchy in bloom \u2014 settlers on the road, taverns and a school and a theater raised, the gold of the crown set to work. But beneath the keep the great root has gone grey and cold, pouring itself out to keep a dying thing alive. It asked for help. It named what it feared. The road points down."},
 {n:46, act:4, t:"The Throne of Power", d:"Jan 2026", x:"A paper bird, a royal court, and an accounting before the king. Granted: 25,000 gold, royal specialists, and a writ for six hundred settlers. Absent from court: Alistair Von Zeigaster."}
 ];
 const NPCS = [
@@ -804,10 +808,13 @@ const RELIQUARY = [
 {name:"The Brother's Letter", img:"the-brothers-letter", acqAt:21, prov:"After the wish — Session 21", holder:"Erik", x:"What he knew, what he feared, and where he left the map. With a man. Not a man. A monster."}
 ];
 const CLUES = [
+{t:"A Gift, Once a Season", sinceAt:47, q:"'Because I like you, I\u2019ll offer those boons free of charge once a season.'", x:"A letter from Velkora, carried to the castle by the courier Grimshaw, with a token returned that William had left behind. The contract is closed \u2014 and still she offers gifts. No price is named. That is what makes it worth fearing."},
+{t:"The Grey in the Root", sinceAt:47, q:"\u2018Help me.\u2019", x:"The World Tree root beneath the keep has gone grey and cold, a streak of it running the height of the wood. The node it guards is dying; the Tree spends itself to keep it alive. Touched, it pleads. Its keeper can steady it \u2014 but the grey only spreads when pressed, and will not lift until the source is stopped, far below."},
+{t:"A Devil, the Drow, and the Red One", sinceAt:47, q:"What the Tree fears", x:"Asked how it might be saved, the root named the hands at its throat: a devil and her minions, the drow, and the red one. Three threats the party has heard before in other words \u2014 now spoken together, by the Tree itself."},
 {t:"I'm Sorry, Red", sinceAt:37, q:"'I'm sorry, Red. — Sarah'", x:"Who is Sarah, what was she to Red, and what was she sorry for? A fire evoker's sword and spellbook left behind, a town that forgot her, and a letter that remembered."},
 {t:"The Crown's Second Sentence", sinceAt:31, q:"'That's all I can tell you. But there's more.'", x:"The crown carries an enchantment deeper than any mortal reading. Only a devil or a god could explain it. Neither has been asked. Yet."},
 {t:"Why, and By Whom", sinceAt:30, q:"'It seems to have been a trap. We do not know why or by who.'", x:"The party's own note on taking the crown. Someone wanted it taken, or wanted it found. Still unanswered since Session 30."},
-{t:"The Mephis— Monolith", sinceAt:24, q:"Half a name on broken stone", x:"Standing on duchy land, older than the duchy, older than the kingdom. What did the missing half spell?"},
+{t:"The Mephis— Monolith", sinceAt:24, q:"Half a name on broken stone", x:"Standing on duchy land, older than the duchy, older than the kingdom. What did the missing half spell? Checked again on the road south: it cannot be lifted, sunk deep as bedrock, and the broken edge is worn smooth \u2014 by intent, or by ages. Magic lingers in it, of no school anyone can name."},
 {t:"The Absence", sinceAt:46, q:"No Alistair at court", x:"Alistair was absent from the royal court. No word since."},
 {t:"The Others Above Velraen", sinceAt:40, q:"'Including Marleaux. But not limited to.'", x:"The duergar named a hierarchy with its top in shadow. Thagram served Velraen. Velraen serves... whom?"},
 {t:"The Chained Pit", sinceAt:34, q:"'Another dimension. Void, or the hells.'", x:"A bottomless hole beneath the keep, bound in chains older than memory. Even Silvanus wouldn't name its far end."},
@@ -957,14 +964,14 @@ DEEPNODES.forEach(n=>{
 /* ---- TEMPORAL SLIDER ---- */
 (function(){
   const range=document.getElementById('tsrange'), valEl=document.getElementById('tsval');
-  const NOW=46;
+  const NOW=47;
   function statusAsOf(n, who){
     // who: {status, diedAt}. Returns the status string to show as of session n.
     if(who.diedAt && n < who.diedAt) return 'alive';
     return who.status;
   }
   function apply(n){
-    valEl.textContent = (n>=NOW) ? 'Session 46 — Now' : 'Session '+n;
+    valEl.textContent = (n>=NOW) ? 'Session 47 — Now' : 'Session '+n;
     // CHRONICLE: hide entries after n
     document.querySelectorAll('#chronicle-list .entry').forEach(e=>{
       const num=+e.querySelector('.num').textContent.replace(/\D/g,'');
