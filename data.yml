@@ -23,7 +23,7 @@ acts:
     color: "#9c6f2a"
   - id: 4
     name: "Act IV — The Deep and the Court"
-    range: "Sessions 39–46"
+    range: "Sessions 39–47"
     color: "#8c3524"
 
 # ---------------------------------------------------------------------
@@ -175,7 +175,6 @@ sessions:
     title: "The Return of Erik"
     date: "Aug 2025"
     description: "Erik wakes in the Seventh Circle, in Velkora's prison palace. He turns down her contract, maps the maze from memory, frees a powerful infernal named Raphael from the top floor, and comes home with red in his feathers. Back at Greenwatch, two devils put contracts on the table. William signs Velkora's: his silver tongue restored, payment owed in dragon."
-  - n: 30 # Keeping original keys for numeric consistency in script reference if needed, but user requested n=id
   - id: 30
     act: 3
     title: "The Theft Mid-Battle"

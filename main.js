@@ -524,15 +524,18 @@ function init() {
 function initTemporalSlider() {
   const range = document.getElementById('tsrange');
   const valEl = document.getElementById('tsval');
-  const NOW = 47;
-  
+  // Derive "now" from the latest session in the data, not a hardcoded value.
+  const NOW = SESSIONS.length ? SESSIONS[SESSIONS.length - 1].id : (+range.max || 1);
+  range.max = NOW;
+  range.value = NOW;
+
   function statusAsOf(n, who) {
     if (who.diedAt && n < who.diedAt) return 'alive';
     return who.status;
   }
-  
+
   function apply(n) {
-    valEl.textContent = (n >= NOW) ? 'Session 47 — Now' : 'Session ' + n;
+    valEl.textContent = (n >= NOW) ? 'Session ' + NOW + ' — Now' : 'Session ' + n;
     
     // CHRONICLE: hide entries after n
     document.querySelectorAll('#chronicle-list .entry').forEach(e => {
@@ -589,7 +592,7 @@ function initTemporalSlider() {
   
   range.addEventListener('input', () => apply(+range.value));
   window.__NPCREF = NPCS;
-  apply(46);
+  apply(Number(range.value) || NOW);
 }
 
 /* ---- VELKORA'S LEDGER (easter egg) ---- */
