@@ -58,6 +58,7 @@ let term = "";
 let placeFilter = "All";
 let npcTerm = "";
 let npcFuse = null;
+let chronicleFuse = null;
 const places = [
   "All",
   "Greenwatch",
@@ -71,13 +72,18 @@ const places = [
 function renderChronicle() {
   const root = $('#chronicle-list');
   root.innerHTML = '';
-  
+
+  // Fuzzy-match session ids for the current term (empty term = match all)
+  const matchIds = (term && chronicleFuse)
+    ? new Set(chronicleFuse.search(term).map(r => r.item.id))
+    : null;
+
   ACTS.forEach(a => {
     if (actFilter && actFilter !== a.id) return;
-    
-    const entries = SESSIONS.filter(s => 
-      s.act === a.id && 
-      (!term || (s.title + ' ' + s.description).toLowerCase().includes(term))
+
+    const entries = SESSIONS.filter(s =>
+      s.act === a.id &&
+      (!matchIds || matchIds.has(s.id))
     );
     if (!entries.length) return;
     
@@ -168,10 +174,17 @@ function init() {
   
   // 2. Searchbox listener
   $('#searchbox').addEventListener('input', e => {
-    term = e.target.value.toLowerCase();
+    term = e.target.value.trim();
     renderChronicle();
   });
-  
+
+  // 2b. Build Fuse.js index for Chronicle search
+  chronicleFuse = new Fuse(SESSIONS, {
+    keys: ['title', 'description'],
+    threshold: 0.35,
+    ignoreLocation: true,
+  });
+
   // 3. Render Chronicle
   renderChronicle();
 

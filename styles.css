@@ -929,7 +929,7 @@ h3.wing small {
    14. Subterranean SVG Node Map System
    -------------------------------------------------------------------------- */
 .deepwrap {
-  position: absolute;
+  position: relative;
   border: 1px solid var(--panel-edge);
   margin-bottom: 12px;
   background-color: #0e0a07;
