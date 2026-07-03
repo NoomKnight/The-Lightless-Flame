@@ -23,7 +23,7 @@ acts:
     color: "#9c6f2a"
   - id: 4
     name: "Act IV — The Deep and the Court"
-    range: "Sessions 39–47"
+    range: "Sessions 39–48"
     color: "#8c3524"
 
 # ---------------------------------------------------------------------
@@ -265,6 +265,11 @@ sessions:
     title: "What Still Moves Beneath"
     date: "Jun 2026"
     description: "Home to a duchy in bloom — settlers on the road, taverns and a school and a theater raised, the gold of the crown set to work. But beneath the keep the great root has gone grey and cold, pouring itself out to keep a dying thing alive. It asked for help. It named what it feared. The road points down."
+  - id: 48
+    act: 4
+    title: "The Last Good Deed"
+    date: "Jun 2026"
+    description: "Provisions at Foldwyn\u2019s in Knightsroost \u2014 and a plea from a customer named Vince Wilfork, whose village of Greenmoss was being raided in the night. The party emptied Greenmoss cave of its goblins, hobgoblins, barghests, and their boss Tink Tinkle, then stopped at William\u2019s family home: a set of bagpipes, a father\u2019s pride, an invitation to Greenwatch. Then the Throat, and the long dark \u2014 a gate kept by the riddling gnome Wickthorn Gulple, hook horrors on the road, and a rescued ranger: Faye Willowleaf of the Rangers of the Woods, hunting the tentacled thing her company chased into the deep."
 
 # ---------------------------------------------------------------------
 # NPCs: The roster of notable characters
@@ -503,6 +508,32 @@ npcs:
     where: "Last seen at the dragons' gate"
     status: "unknown"
     description: "Dueled Red and earned his respect. Not to be confused with Cedric."
+  - name: "Faye Willowleaf"
+    role: "Ranger of the Woods"
+    where: "The deep roads"
+    status: "alive"
+    description: "Found alone on the deep road, cornered by hook horrors. Her company came down chasing a large tentacled monster \u2014 an unknown thing even to her. She has heard of Velraen. She has met Marleaux."
+  - name: "Wickthorn Gulple"
+    role: "Keeper of the Tollgate"
+    where: "The deep roads"
+    status: "alive"
+    description: "A deep gnome at a drawn bridge who trades passage for wit. His name is a riddle, and the party solved it. On the way back, there may be a toll of some kind."
+  - name: "Vince Wilfork"
+    role: "Villager of Greenmoss"
+    where: "Greenmoss, near Knightsroost"
+    status: "alive"
+    description: "Came to Foldwyn\u2019s for a longsword and left with dragon-slayers. His village was being raided in the night. It is not anymore."
+  - name: "Tink Tinkle"
+    role: "Goblin boss of Greenmoss cave"
+    where: "Greenmoss cave"
+    status: "dead"
+    diedAt: 48
+    description: "Led the goblins, hobgoblins, and barghests raiding Greenmoss. Led them right up until the party arrived."
+  - name: "The Hasenpfeffer Family"
+    role: "William\u2019s family"
+    where: "Knightsroost"
+    status: "alive"
+    description: "Visited on the road down. They gave William a set of bagpipes, his father told him he is proud, and the party invited the family to shelter at Greenwatch."
 
 # ---------------------------------------------------------------------
 # Vault: Attuned and stored magic items
@@ -628,6 +659,30 @@ vault:
     prov: "Negotiated at Greenwatch — Session 29"
     holder: "Disposition uncertain"
     description: "The competing offer, from a licensed agent of the Ninth Infernal Bureau. Whether it was ever signed is an open question."
+  - name: "The Hasenpfeffer Bagpipes"
+    img: "the-hasenpfeffer-bagpipes"
+    acqAt: 48
+    prov: "A gift from William\u2019s family at their home in Knightsroost \u2014 Session 48"
+    holder: "William"
+    description: "An heirloom of the Hasenpfeffer house, given with a father\u2019s pride."
+  - name: "Driftglobe"
+    img: "driftglobe"
+    acqAt: 48
+    prov: "Foldwyn\u2019s, Knightsroost \u2014 Session 48"
+    holder: "The party"
+    description: "A glass globe that hovers and sheds light on command. Bought for a road with no sun."
+  - name: "Bag of Holding"
+    img: "bag-of-holding"
+    acqAt: 48
+    prov: "Foldwyn\u2019s, Knightsroost \u2014 Session 48"
+    holder: "The party"
+    description: "Bigger inside than out. William tested this personally by climbing in; Red pulled him back out."
+  - name: "The Expedition Stock"
+    img: "the-expedition-stock"
+    acqAt: 48
+    prov: "Foldwyn\u2019s, Knightsroost \u2014 buy five, get one free \u2014 Session 48"
+    holder: "The party"
+    description: "Six potions of fire resistance, six of poison resistance, three of invisibility, three of jump, five of flying."
 
 # ---------------------------------------------------------------------
 # Reliquary: Valueless but meaningful tokens & letters
@@ -731,7 +786,7 @@ clues:
   - title: "I'm Sorry, Red"
     sinceAt: 37
     q: "'I'm sorry, Red. — Sarah'"
-    description: "Who is Sarah, what was she to Red, and what was she sorry for? A fire evoker's sword and spellbook left behind, a town that forgot her, and a letter that remembered."
+    description: "Who is Sarah, what was she to Red, and what was she sorry for? A fire evoker's sword and spellbook left behind, a town that forgot her, and a letter that remembered. Faye Willowleaf, well-traveled, had not heard the name."
   - title: "The Crown's Second Sentence"
     sinceAt: 31
     q: "'That's all I can tell you. But there's more.'"
@@ -764,6 +819,14 @@ clues:
     sinceAt: 34
     q: "'Here labored the crew of Master Delruk, Fifth Keeper of the Root'"
     description: "The walls beneath Greenwatch use a familiar title, a thousand years before Titus stole it. Nobody has pulled this thread yet."
+  - title: "The Thing With Tentacles"
+    sinceAt: 48, 
+    q: "'A large monster... an unknown monster.'" 
+    description: "Faye Willowleaf\u2019s company, the Rangers of the Woods, chased a great tentacled thing that even she cannot name. She was found alone. Whatever it is, it is somewhere ahead."
+  - title: "She Has Met Marleaux"
+    sinceAt: 48, 
+    q: "Asked plainly, she answered plainly: yes."
+    description: "Faye has met Marleaux \u2014 the same name the duergar placed above Velraen. What the ranger knows, and how she came to know it, is worth asking."
 
 # ---------------------------------------------------------------------
 # Mapspots: High-level overland regions/towns
@@ -871,15 +934,15 @@ deepnodes:
   - name: "The Throat"
     x: 250
     y: 210
-    visited: false
+    visited: true
     kind: "stop"
     blurb: "A cave mouth in the Hearthgrove Vale, about half a day from the keep. This is the way in now. Bring rope and bring light; the first mile drops fast and the footing is bad."
   - name: "The Tollgate"
     x: 330
     y: 300
-    visited: false
+    visited: true
     kind: "stop"
-    blurb: "Deep gnomes run a gate here and charge to pass. Pay what they ask, do not haggle, and do not let them count your party out loud. They sell rumors too, and most are even true."
+    blurb: "A drawn bridge kept by Wickthorn Gulple, a deep gnome who trades passage for wit. The party passed by solving the riddle of his name. On the way back, there may be a toll of some kind."
   - name: "The Worm Road"
     x: 310
     y: 400
