@@ -1,0 +1,1005 @@
+# =====================================================================
+# THE LIGHTLESS FLAME — CAMPAIGN DATABASE
+# =====================================================================
+# This file contains the complete records of the Greenwatch Campaign.
+# Edit this file to add/update sessions, NPCs, vault items, clues, or maps.
+# =====================================================================
+
+# ---------------------------------------------------------------------
+# Acts: Large narrative arcs of the campaign
+# ---------------------------------------------------------------------
+acts:
+  - id: 1
+    name: "Act I — The Circus and the City"
+    range: "Sessions 1–11"
+    color: "#c9a227"
+  - id: 2
+    name: "Act II — The Hunt for Titus"
+    range: "Sessions 12–23"
+    color: "#b08a2e"
+  - id: 3
+    name: "Act III — The Dukes of Greenwatch"
+    range: "Sessions 24–38"
+    color: "#9c6f2a"
+  - id: 4
+    name: "Act IV — The Deep and the Court"
+    range: "Sessions 39–48"
+    color: "#8c3524"
+
+# ---------------------------------------------------------------------
+# Sessions: The chronological session journal
+# ---------------------------------------------------------------------
+sessions:
+  - id: 1
+    act: 1
+    title: "The Circus at Easterlaque"
+    date: "Sep 2024"
+    description: "A traveling circus comes to Easterlaque and things go bad fast. William, Erik, and Red meet in the aftermath and end up on the same road."
+  - id: 2
+    act: 1
+    title: "The Deviltoad"
+    date: "Sep 2024"
+    description: "Mark the deviltoad admits he killed two people because he wanted to. Erik signs on as the group's guide. His price: adventure."
+  - id: 3
+    act: 1
+    title: "The Road to Allfield"
+    date: "Oct 2024"
+    description: "Goblins on the road, Erik's first wildshape (an elk), and a fight alongside the Crownsguard against gnolls at Allfield."
+  - id: 4
+    act: 1
+    title: "Zadash"
+    date: "Oct 2024"
+    description: "The party reaches Zadash. The Firefly Inn, the job board at the King's Hall, and a sewer pass from the High Richter."
+  - id: 5
+    act: 1
+    title: "The Evening Nip"
+    date: "Oct 2024"
+    description: "They find the Evening Nip."
+  - id: 6
+    act: 1
+    title: "The Knights of Requital"
+    date: "Oct 2024"
+    description: "Behind a door in the Leaky Tap: the Knights of Requital. Lord Sutan and the High Richter are allegedly corrupt, and a magic mirror shows Dolan is telling the truth."
+  - id: 7
+    act: 1
+    title: "The Gentleman"
+    date: "Oct 2024"
+    description: "The Tri-Spires and the history of the three towers. First meeting with the Gentleman over a game of cards. He has a job: reopen a collapsed smuggling tunnel."
+  - id: 8
+    act: 1
+    title: "The Myriad"
+    date: "Nov 2024"
+    description: "Business with the Myriad, Christina gets sent home, and the party registers for the Harvest Festival tournament."
+  - id: 9
+    act: 1
+    title: "The Black-and-Red House"
+    date: "Nov 2024"
+    description: "Casing Lord Sutan's house in the north of the city. Two days until the festival."
+  - id: 10
+    act: 1
+    title: "The Night the Roots Came"
+    date: "Dec 2024"
+    description: "The Pink Pony Club, a letter naming the High Richter, and a break-in at Lord Sutan's that gets cut short when a root the size of a street tears through Zadash. Giant red and black birds start taking people. Shadow is nearly one of them."
+  - id: 11
+    act: 1
+    title: "The Legend of Titus"
+    date: "Jan 2025"
+    description: "The Gentleman retires into politics under a new name: Alistair Von Zeigaster. He hands the party a royal job, find the man calling himself Titus reborn, and tells the full thousand-year history of Titus and the Keepers of the Root. Shadow gets into Strixhaven."
+  - id: 12
+    act: 2
+    title: "Provisions"
+    date: "Jan 2025"
+    description: "Shopping, bounty boards, and some questions about Zadash's pet trade."
+  - id: 13
+    act: 2
+    title: "The Burned Circle"
+    date: "Feb 2025"
+    description: "Heading west: coins in a tree knot, a perfect burned circle, a wooden sphere with a poem inside it, and a stone giant the party ends up having to fight."
+  - id: 14
+    act: 2
+    title: "Squak"
+    date: "Feb 2025"
+    description: "Gnolls in the night. Erik befriends a hawk named Squak. Cursed werefolk point the way to Scatterbones, a town friendly to the Keepers."
+  - id: 15
+    act: 2
+    title: "Druids at the Tavern"
+    date: "Feb 2025"
+    description: "Four druids of the Keepers of the Root attack at the tavern. They lose."
+  - id: 16
+    act: 2
+    title: "A Good Hawk"
+    date: "Feb 2025"
+    description: "Squak dies."
+  - id: 17
+    act: 2
+    title: "The Dragon Egg"
+    date: "Mar 2025"
+    description: "The party wins over a friendly kobold clan and leaves with a dragon egg."
+  - id: 18
+    act: 2
+    title: "Minnesota"
+    date: "Mar 2025"
+    description: "The kobolds turn out to be the start of something bigger: they head out across the continent recruiting the overlooked, and the army gets its name. Minnesota. In Cattlekeep, Red finds his uncle Clyde at the Hook, Line and Sinker, and the city's real ruler is named: Wolfram Malachi."
+  - id: 19
+    act: 2
+    title: "The Steward's Contract"
+    date: "Mar 2025"
+    description: "A contract with Cattlekeep's leader sets the party against Malachi's men."
+  - id: 20
+    act: 2
+    title: "The Wish"
+    date: "Mar 2025"
+    description: "The confrontation with Titus reborn. A Deck of Many Things gets opened mid-fight, and a barkeep ends the whole thing with a wish: Titus dies, and all the Keepers of the Root die with him."
+  - id: 21
+    act: 2
+    title: "The Brother"
+    date: "Apr 2025"
+    description: "The truth comes out. The man wearing Titus's face was Erik's lost brother. With the last of his power, he shut the door beneath the world tree for good."
+  - id: 22
+    act: 2
+    title: "Daylight"
+    date: "Apr 2025"
+    description: "Malachi gets dragged into open daylight on the plains and destroyed."
+  - id: 23
+    act: 2
+    title: "The Crown Leaves Cattlekeep"
+    date: "Apr 2025"
+    description: "His captives are freed, Nyssa Greylark among them, and an ancient crown leaves the castle in the party's hands, taken to potentially use as a weapon. Theodric takes over Cattlekeep."
+  - id: 24
+    act: 3
+    title: "The King's Grant"
+    date: "Jun 2025"
+    description: "An audience with King Aleric Valethorn the 5th. The party is granted the fort of Greenwatch. The catch: two green dragons live there."
+  - id: 25
+    act: 3
+    title: "The Kollosensteins"
+    date: "Jun 2025"
+    description: "Back through Easterlaque, where three kobolds are freed from Red's family, the Kollosensteins. Minnesota is called to Greenwatch."
+  - id: 26
+    act: 3
+    title: "Dinner with Marleaux"
+    date: "Jul 2025"
+    description: "Zadash again. Pumat Sol points them to Marleaux the Red, and a paper bird delivers a devil's name: Grimshaw. Shadow, Melethor, and Professor Sterling Pemberton join the trip home. Marleaux has the party over for dinner and confirms the ley lines are corrupted."
+  - id: 27
+    act: 3
+    title: "The Lieutenants"
+    date: "Aug 2025"
+    description: "Minnesota's officers arrive, Rho Khetshypp, Aero Planes, and Stephen Rogers among them, and everyone trades histories around the fire."
+  - id: 28
+    act: 3
+    title: "The End of Erik"
+    date: "Aug 2025"
+    description: "The dragon forest. Past a wall of thorns, surrounded and out of options, Erik trades his life for his friends' and lets the blade fall. Erik dies."
+  - id: 29
+    act: 3
+    title: "The Return of Erik"
+    date: "Aug 2025"
+    description: "Erik wakes in the Seventh Circle, in Velkora's prison palace. He turns down her contract, maps the maze from memory, frees a powerful infernal named Raphael from the top floor, and comes home with red in his feathers. Back at Greenwatch, two devils put contracts on the table. William signs Velkora's: his silver tongue restored, payment owed in dragon."
+  - id: 30
+    act: 3
+    title: "The Theft Mid-Battle"
+    date: "Aug 2025"
+    description: "The assault on the keep. Mid-fight, an invisible William lifts the crown from the dragons' hoard."
+  - id: 31
+    act: 3
+    title: "What the Crown Is"
+    date: "Oct 2025"
+    description: "Velkora takes care of the other dragon herself. A natural 20 turns up the crown's history: forged by an archdevil, built to bend wills, and feared by Asmodeus enough that he killed its maker. Summary says whoever wears it at his fall claims the throne. A grove of the world tree speaks: come find me."
+  - id: 32
+    act: 3
+    title: "One Less Friend"
+    date: "Oct 2025"
+    description: "Velkora's contract is completed and the dragon delivered. She wanted the crown too. The party keeps it, and now has one less friend in the hells."
+  - id: 33
+    act: 3
+    title: "Ulf and Mila"
+    date: "Oct 2025"
+    description: "Erik picks up a dark mustang named Ulf, and a wounded blink dog named Mila decides to stay."
+  - id: 34
+    act: 3
+    title: "The House Beneath the House"
+    date: "Oct 2025"
+    description: "Beneath the dining room: a buried dwarven complex. The chained ghosts of Marley and Marley, a bottomless pit bound in chains, an unfinished instrument missing its water parts, and walls signed by the crew of Master Delruk, Fifth Keeper of the Root. At the heart of it all, a living root of the World Tree on a node of the ley lines. William swears the tree's oath: protect the node, and never open a portal."
+  - id: 35
+    act: 3
+    title: "There Is No Jeffrey"
+    date: "Nov 2025"
+    description: "Erik takes over care of the root. Red crystals turn green under fire. Marleaux's tower is just gone. In Richard's Vale, it turns out there is no Jeffrey, and there never was."
+  - id: 36
+    act: 3
+    title: "The False Hydra"
+    date: "Nov 2025"
+    description: "A census, a merchant caravan, and a horror in the barrel room: a false hydra, killed. Among the dead nobody remembered: Tumble, of the Rough and Tumble. Erik buys maps of Zagarot's Merchant's Run."
+  - id: 37
+    act: 3
+    title: "The Gate and the Letter"
+    date: "Nov 2025"
+    description: "The root turns out to be a gate. Opened with the crystals, it shows the Seventh Circle, and her. They close it. Christopher takes over the library, the Freeblade Commission signs on, and a destroyed caravan turns up smelling like Marleaux's vanished tower. In a vanished woman's room, a letter for Red: I'm sorry, Red. Sarah."
+  - id: 38
+    act: 3
+    title: "The Walls of Zagarot"
+    date: "Nov 2025"
+    description: "A captured creature guides Erik to the walls of the sealed empire. The guide is shot dead from a tower. Erik flies away safely."
+  - id: 39
+    act: 4
+    title: "The Machine"
+    date: "Dec 2025"
+    description: "The tremors lead to the Stonebriar mines: melted stone, duergar, and a machine shaking the earth. Chanticlear of the Emberhold thinks Marleaux the Red might be a lich. The party claims the Duergar Resonance Shield."
+  - id: 40
+    act: 4
+    title: "V"
+    date: "Dec 2025"
+    description: "A captured duergar talks. The dig answers to Thagram. Thagram answers to Velraen, V, where the cold and power comes from. And above her there are others. Including Marleaux. But not limited to."
+  - id: 41
+    act: 4
+    title: "The Death of Chanticlear"
+    date: "Jan 2026"
+    description: "Chanticlear is murdered by drow."
+  - id: 42
+    act: 4
+    title: "Blue Corn"
+    date: "Jan 2026"
+    description: "Phelban Shelkesha, renamed Blue Corn and put under protection, confirms the hierarchy and the target: the machine is digging up, beneath Greenwatch, toward the root."
+  - id: 43
+    act: 4
+    title: "Into the Underdark"
+    date: "Jan 2026"
+    description: "Down the trapped tunnel and through an illusory wall into the Underdark. William's drow disguise barely survives the local etiquette. He turns Red into a rat and pockets him; Red escapes the pocket and goes exploring on his own."
+  - id: 44
+    act: 4
+    title: "Tal'Tutin"
+    date: "Jan 2026"
+    description: "The party befriends a purple worm the size of a river. Its name is Tal'Tutin."
+  - id: 45
+    act: 4
+    title: "The Collapse"
+    date: "Jan 2026"
+    description: "The party escapes the collapsing tunnel. Thagram, notably, does not."
+  - id: 46
+    act: 4
+    title: "The Throne of Power"
+    date: "Jan 2026"
+    description: "A paper bird, a royal court, and an accounting before the king. Granted: 25,000 gold, royal specialists, and a writ for six hundred settlers. Absent from court: Alistair Von Zeigaster."
+  - id: 47
+    act: 4
+    title: "What Still Moves Beneath"
+    date: "Jun 2026"
+    description: "Home to a duchy in bloom — settlers on the road, taverns and a school and a theater raised, the gold of the crown set to work. But beneath the keep the great root has gone grey and cold, pouring itself out to keep a dying thing alive. It asked for help. It named what it feared. The road points down."
+  - id: 48
+    act: 4
+    title: "The Last Good Deed"
+    date: "Jun 2026"
+    description: "Provisions at Foldwyn\u2019s in Knightsroost \u2014 and a plea from a customer named Vince Wilfork, whose village of Greenmoss was being raided in the night. The party emptied Greenmoss cave of its goblins, hobgoblins, barghests, and their boss Tink Tinkle, then stopped at William\u2019s family home: a set of bagpipes, a father\u2019s pride, an invitation to Greenwatch. Then the Throat, and the long dark \u2014 a gate kept by the riddling gnome Wickthorn Gulple, hook horrors on the road, and a rescued ranger: Faye Willowleaf of the Rangers of the Woods, hunting the tentacled thing her company chased into the deep."
+
+# ---------------------------------------------------------------------
+# NPCs: The roster of notable characters
+# ---------------------------------------------------------------------
+npcs:
+  - name: "Stephen Rogers ('Steve')"
+    role: "Commander of the Greenwatch garrison"
+    where: "Greenwatch"
+    status: "alive"
+    description: "Minnesota lieutenant turned drillmaster. Most of his troops are kobolds, and he's making real soldiers out of them."
+  - name: "Christopher Hasenpfeffer"
+    role: "Keeper of the library; William's brother"
+    where: "Greenwatch"
+    status: "alive"
+    description: "Fourteen, gifted, and long ago party to a bargain with Velkora. Runs the library like it matters. It does."
+  - name: "Shadow"
+    role: "Strixhaven-trained rogue"
+    where: "Greenwatch"
+    status: "alive"
+    description: "Found at the Allfield academy and chosen by the party for Strixhaven. Now lives at Greenwatch."
+  - name: "Melethor"
+    role: "Shadow's friend from Strixhaven"
+    where: "Greenwatch"
+    status: "alive"
+    description: "Came out with the party after the Zadash trip and stayed."
+  - name: "Sterling Pemberton"
+    role: "Professor of history"
+    where: "Greenwatch"
+    status: "alive"
+    description: "'Pemberton is what they call me at the school.' Came out with the party and never really left."
+  - name: "Brock"
+    role: "Amethyst dragon"
+    where: "Greenwatch"
+    status: "alive"
+    description: "There is a dragon at the keep. He is on our side."
+  - name: "Iroh"
+    role: "Companion of the keep"
+    where: "Greenwatch"
+    status: "alive"
+    description: "With the party."
+  - name: "Despona"
+    role: "Doctor and informant"
+    where: "Greenwatch, under Steve's watch"
+    status: "alive"
+    description: "Drow. Provided the map of the deep roads. Helpful. Watched."
+  - name: "Terrick"
+    role: "Master artisan of Greenwatch"
+    where: "Greenwatch"
+    status: "alive"
+    description: "Builds faster than the duchy can plan."
+  - name: "Mira"
+    role: "Painter"
+    where: "Greenwatch"
+    status: "alive"
+    description: "Working on the mural."
+  - name: "Mila"
+    role: "Blink dog"
+    where: "Greenwatch"
+    status: "alive"
+    description: "Arrived wounded. Stayed by choice. Fast friends with Thor."
+  - name: "Thor"
+    role: "William's dog"
+    where: "Greenwatch"
+    status: "alive"
+    description: "A good boy."
+  - name: "Boldwin the Bold"
+    role: "Leader of the kobolds"
+    where: "With the army"
+    status: "alive"
+    description: "The kobolds' leader. Bound for Minnesota."
+  - name: "Rho Khetshypp"
+    role: "Minnesota lieutenant"
+    where: "With the army"
+    status: "alive"
+    description: "Red dragonborn out of the farming village of Ashbourne."
+  - name: "Aero Planes"
+    role: "Minnesota lieutenant; archer"
+    where: "With the army"
+    status: "alive"
+    description: "Out of Allfield, barely. Learned the bow from his father. Hawk named Jett."
+  - name: "Mai Dovekin"
+    role: "Freeblade Commission"
+    where: "Greenwatch, with the detachment"
+    status: "alive"
+    description: "Fifty gold a month and a house after a year. So far, worth it."
+  - name: "King Aleric Valethorn the 5th"
+    role: "King of the Eternals"
+    where: "The capital"
+    status: "alive"
+    description: "Young, attentive, and increasingly of the view that Greenwatch's problems are Greenwatch's to solve."
+  - name: "Owyn Xubarin"
+    role: "Court mage of the Eternals"
+    where: "The capital"
+    status: "alive"
+    description: "The king's wizard. Has questions about the ley lines too."
+  - name: "Alistair Von Zeigaster"
+    role: "Formerly the Gentleman"
+    where: "Last seen: absent from court"
+    status: "unknown"
+    description: "Smuggler, kingmaker, politician. Absent from the royal court, and no word since."
+  - name: "Theodric"
+    role: "Lord of Cattlekeep"
+    where: "Cattlekeep"
+    status: "alive"
+    description: "Installed by the party after Malachi's end. Holds the city in their name."
+  - name: "Nyssa Greylark"
+    role: "Lady of Cattlekeep"
+    where: "Cattlekeep"
+    status: "alive"
+    description: "Freed from Malachi's keeping."
+  - name: "Ruffe"
+    role: "Co-leader of Richard's Vale; barkeep"
+    where: "Richard's Vale"
+    status: "alive"
+    description: "Man of the people. Keeper of the Rough and Tumble, named for himself and his late wife."
+  - name: "Florence"
+    role: "Co-leader of Richard's Vale"
+    where: "Richard's Vale"
+    status: "alive"
+    description: "Political ambitions and strong opinions on single-family zoning. Elected fair and square."
+  - name: "Tumble"
+    role: "Of the Rough and Tumble"
+    where: "Richard's Vale"
+    status: "dead"
+    diedAt: 36
+    description: "Ruffe's wife, taken by the false hydra. Her name is still on the sign. Few remember why."
+  - name: "Jeffrey"
+    role: "Leader of Richard's Vale"
+    where: "—"
+    status: "myth"
+    description: "There is no Jeffrey. There never was."
+  - name: "The Kollosensteins"
+    role: "Red's family; guardians of Easterlaque"
+    where: "Easterlaque"
+    status: "alive"
+    description: "A towering clan of goliaths who have protected Easterlaque for generations. Relations with the duchy: complicated, but family."
+  - name: "Pumat Sol"
+    role: "Proprietor, the Invulnerable Vagrant"
+    where: "Zadash"
+    status: "alive"
+    description: "All of him."
+  - name: "The Knights of Requital"
+    role: "Aggrieved citizens of Zadash"
+    where: "Zadash"
+    status: "unknown"
+    description: "Finn, Dolan, and friends. Status of their cause: unresolved, as far as the party knows."
+  - name: "Clyde"
+    role: "Red's uncle"
+    where: "Cattlekeep"
+    status: "dead"
+    diedAt: 18
+    description: "Found at the Hook, Line and Sinker. Killed in Cattlekeep by Malachi. The vampire did not outlive him by much."
+  - name: "Tomas"
+    role: "Barkeep of the Evening Nip"
+    where: "Zadash"
+    status: "dead"
+    diedAt: 20
+    description: "Dead from the wish."
+  - name: "Squak"
+    role: "Hawk"
+    where: "—"
+    status: "dead"
+    diedAt: 16
+    description: "He was a good hawk."
+  - name: "Christina"
+    role: "Tabaxi of the Clan of the Dead Eyes"
+    where: "Home"
+    status: "alive"
+    description: "Made it back. Confirmed."
+  - name: "Chanticlear"
+    role: "High mage of the Emberhold"
+    where: "Emberhold"
+    status: "dead"
+    diedAt: 41
+    description: "Concluded Marleaux might be a lich. Murdered by drow while studying the enemy's machine."
+  - name: "Phelban Shelkesha ('Blue Corn')"
+    role: "Duergar informant"
+    where: "Under the duchy's protection"
+    status: "alive"
+    description: "Talked. Renamed. Watched over."
+  - name: "Grimshaw"
+    role: "Devil; licensed agent"
+    where: "The hells"
+    status: "alive"
+    description: "Arrived with paperwork. Left without a signature. Probably."
+  - name: "Velkora"
+    role: "Devil of the Seventh Circle"
+    where: "The Seventh Circle"
+    status: "alive"
+    description: "Holds Christopher's bargain and William's completed contract. Keeps her word. All of it."
+  - name: "Raphael"
+    role: "Superior infernal, freed by Erik"
+    where: "Whereabouts unknown"
+    status: "unknown"
+    description: "Owes a debt. Pays in red feathers, so far."
+  - name: "Velraen ('V')"
+    role: "Power of the deep"
+    where: "The Underdark"
+    status: "alive"
+    description: "Where the cold and power comes from. Stopped a heart by looking at it, the duergar say."
+  - name: "Thagram"
+    role: "Duergar warlord of the dig"
+    where: "The collapsed tunnel"
+    status: "dead"
+    diedAt: 45
+    description: "Commanded the machine. Did not escape the collapse."
+  - name: "Marleaux the Red"
+    role: "Wizard; possibly more, possibly less alive"
+    where: "Whereabouts unknown"
+    status: "unknown"
+    description: "Hosted dinner once, kindly. His moving tower burned and vanished. The Emberhold's theory: lich."
+  - name: "Wolfram Malachi"
+    role: "Vampire lord of Cattlekeep"
+    where: "—"
+    status: "dead"
+    diedAt: 22
+    description: "Ended in open daylight on the plains."
+  - name: "Titus reborn"
+    role: "—"
+    where: "—"
+    status: "dead"
+    diedAt: 20
+    description: "See: the wish. See also: the brother."
+  - name: "Sarah"
+    role: "—"
+    where: "Vanished from Richard's Vale"
+    status: "unknown"
+    description: "Four words and a sword left behind. 'I'm sorry, Red. — Sarah.'"
+  - name: "Cedric"
+    role: "Tiefling performer"
+    where: "Zadash"
+    status: "alive"
+    description: "Of the theater in the round. Not to be confused with Cedric."
+  - name: "Cedric"
+    role: "Undead horseman"
+    where: "Last seen at the dragons' gate"
+    status: "unknown"
+    description: "Dueled Red and earned his respect. Not to be confused with Cedric."
+  - name: "Faye Willowleaf"
+    role: "Ranger of the Woods"
+    where: "The deep roads"
+    status: "alive"
+    description: "Found alone on the deep road, cornered by hook horrors. Her company came down chasing a large tentacled monster \u2014 an unknown thing even to her. She has heard of Velraen. She has met Marleaux."
+  - name: "Wickthorn Gulple"
+    role: "Keeper of the Tollgate"
+    where: "The deep roads"
+    status: "alive"
+    description: "A deep gnome at a drawn bridge who trades passage for wit. His name is a riddle, and the party solved it. On the way back, there may be a toll of some kind."
+  - name: "Vince Wilfork"
+    role: "Villager of Greenmoss"
+    where: "Greenmoss, near Knightsroost"
+    status: "alive"
+    description: "Came to Foldwyn\u2019s for a longsword and left with dragon-slayers. His village was being raided in the night. It is not anymore."
+  - name: "Tink Tinkle"
+    role: "Goblin boss of Greenmoss cave"
+    where: "Greenmoss cave"
+    status: "dead"
+    diedAt: 48
+    description: "Led the goblins, hobgoblins, and barghests raiding Greenmoss. Led them right up until the party arrived."
+  - name: "The Hasenpfeffer Family"
+    role: "William\u2019s family"
+    where: "Knightsroost"
+    status: "alive"
+    description: "Visited on the road down. They gave William a set of bagpipes, his father told him he is proud, and the party invited the family to shelter at Greenwatch."
+
+# ---------------------------------------------------------------------
+# Vault: Attuned and stored magic items
+# ---------------------------------------------------------------------
+vault:
+  - name: "The Crown of Greenwatch"
+    img: "the-crown-of-greenwatch"
+    acqAt: 30
+    prov: "Taken from the hoard of the green dragons of Greenwatch — Session 30 — by an invisible rabbit"
+    holder: "Worn and attuned: William"
+    description: "Forged by an archdevil and built to bend wills. Dominate Monster three times a day, poison to anyone who strikes the wearer, and a deeper enchantment nobody can read. Asmodeus feared it enough to kill its maker. There is more."
+  - name: "The Crown of Thorn and Blood"
+    img: "the-crown-of-thorn-and-blood"
+    acqAt: 23
+    prov: "Taken from Wolfram Malachi's castle, Cattlekeep — Session 23 — 'to potentially use as a weapon'"
+    holder: "Red's pack"
+    description: "The vampire's crown. The quieter of the party's two crowns."
+  - name: "Nine Lives Stealer Greataxe"
+    img: "nine-lives-stealer-greataxe"
+    acqAt: 23
+    prov: "Red's arsenal"
+    holder: "Red"
+    description: "An axe with an appetite for souls and a countdown nobody has checked recently."
+  - name: "Bloodaxe"
+    img: "bloodaxe"
+    acqAt: 19
+    prov: "Red's arsenal"
+    holder: "Red, attuned"
+    description: "Necrotic edge. The working blade of the party's strongest arm. Red owns two."
+  - name: "Rapier of Wounding"
+    img: "rapier-of-wounding"
+    acqAt: 21
+    prov: "William's side"
+    holder: "William, attuned"
+    description: "Glows while unsheathed, and the wounds keep arguing after the duel ends."
+  - name: "Ring of Mind Shielding"
+    img: "ring-of-mind-shielding"
+    acqAt: 11
+    prov: "William's hand"
+    holder: "William, attuned"
+    description: "William's thoughts are his own."
+  - name: "The Hat of Glamour"
+    img: "the-hat-of-glamour"
+    acqAt: 25
+    prov: "William's wardrobe"
+    holder: "William"
+    description: "Disguise at a touch."
+  - name: "Boogie Boots & the Percussion of Movement"
+    img: "boogie-boots-and-the-percussion-of-movement"
+    acqAt: 6
+    prov: "William's wardrobe"
+    holder: "William"
+    description: "The gear of the College of Dance. William fights in rhythm."
+  - name: "Staff of the Woodlands"
+    img: "staff-of-the-woodlands"
+    acqAt: 11
+    prov: "Acquired in Zadash — Session 11"
+    holder: "Erik, attuned"
+    description: "Shillelagh, wall of thorns, and the whole road since. Regains two charges at dawn."
+  - name: "Cape of the Bat"
+    img: "cape-of-the-bat"
+    acqAt: 17
+    prov: "Erik's shoulders"
+    holder: "Erik, attuned"
+    description: "Flight, feather fall, and extra stealth for a bird who already had plenty."
+  - name: "Amulet of Proof against Detection and Location"
+    img: "amulet-of-proof-against-detection-and-location"
+    acqAt: 17
+    prov: "Erik's neck"
+    holder: "Erik, attuned"
+    description: "The root's caretaker can't be scried or located by magic."
+  - name: "Ring of CounterSpell"
+    img: "ring-of-counterspell"
+    acqAt: 11
+    prov: "Erik's hand"
+    holder: "Erik"
+    description: "For when someone else's incantation needs to stop mid-sentence."
+  - name: "Duergar Resonance Shield"
+    img: "duergar-resonance-shield"
+    acqAt: 39
+    prov: "Claimed at the Stonebriar mines — Session 39"
+    holder: "The party"
+    description: "Deep-forged and faintly humming. A sample of the machine-makers' craft."
+  - name: "Longsword of Lawbrand"
+    img: "longsword-of-lawbrand"
+    acqAt: 37
+    prov: "Found in a vanished woman's room, Richard's Vale — Session 37"
+    holder: "The vault"
+    description: "Left behind by Sarah, along with her spellbook and four words."
+  - name: "Sarah's Spellbook"
+    img: "sarahs-spellbook"
+    acqAt: 37
+    prov: "Richard's Vale — Session 37"
+    holder: "Red keeps it with the letter"
+    description: "The working book of a fire evoker. Reads like someone who left in a hurry, or knew she wouldn't be back."
+  - name: "Du'Laq's Obsidian Daggers"
+    img: "dulaqs-obsidian-daggers"
+    acqAt: 18
+    prov: "Red's collection"
+    holder: "Red"
+    description: "Black glass, someone else's name."
+  - name: "Eyes of the Master of Languages"
+    img: "eyes-of-the-master-of-languages"
+    acqAt: 23
+    prov: "Red's collection"
+    holder: "Red, attuned"
+    description: "Every tongue on the continent, worn by the party member with the fewest words."
+  - name: "Erik's Scroll Workshop"
+    img: "eriks-scroll-workshop"
+    acqAt: 34
+    prov: "Ongoing — magic ink, transcription gloves, and ambition"
+    holder: "Erik"
+    description: "Gloves of Immediate Transcription, twenty-odd measures of magic ink, and a growing shelf of scrolls up to ninth level. Erik is building the duchy's spell library by hand."
+  - name: "The Velkora Contract (Completed)"
+    img: "the-velkora-contract-completed"
+    acqAt: 29
+    prov: "Signed at Greenwatch — Session 29; fulfilled — Session 32"
+    holder: "On file; William keeps his copy"
+    description: "The Gift of the Silver Tongue, restored, in exchange for one adult green dragon, delivered. Every word read before signing. Every word honored since. Signed: <span class=\"vksig\" id=\"vkledger-trigger\" role=\"button\" tabindex=\"0\" title=\"...\">Velkora — Bureaucrat of Bound Pacts, Seductress of Subtext, Honorable Devil.</span>"
+  - name: "The Grimshaw Contract"
+    img: "the-grimshaw-contract"
+    acqAt: 29
+    prov: "Negotiated at Greenwatch — Session 29"
+    holder: "Disposition uncertain"
+    description: "The competing offer, from a licensed agent of the Ninth Infernal Bureau. Whether it was ever signed is an open question."
+  - name: "The Hasenpfeffer Bagpipes"
+    img: "the-hasenpfeffer-bagpipes"
+    acqAt: 48
+    prov: "A gift from William\u2019s family at their home in Knightsroost \u2014 Session 48"
+    holder: "William"
+    description: "An heirloom of the Hasenpfeffer house, given with a father\u2019s pride."
+  - name: "Driftglobe"
+    img: "driftglobe"
+    acqAt: 48
+    prov: "Foldwyn\u2019s, Knightsroost \u2014 Session 48"
+    holder: "The party"
+    description: "A glass globe that hovers and sheds light on command. Bought for a road with no sun."
+  - name: "Bag of Holding"
+    img: "bag-of-holding"
+    acqAt: 48
+    prov: "Foldwyn\u2019s, Knightsroost \u2014 Session 48"
+    holder: "The party"
+    description: "Bigger inside than out. William tested this personally by climbing in; Red pulled him back out."
+  - name: "The Expedition Stock"
+    img: "the-expedition-stock"
+    acqAt: 48
+    prov: "Foldwyn\u2019s, Knightsroost \u2014 buy five, get one free \u2014 Session 48"
+    holder: "The party"
+    description: "Six potions of fire resistance, six of poison resistance, three of invisibility, three of jump, five of flying."
+
+# ---------------------------------------------------------------------
+# Reliquary: Valueless but meaningful tokens & letters
+# ---------------------------------------------------------------------
+reliquary:
+  - name: "Sarah's Letter"
+    img: "sarahs-letter"
+    acqAt: 37
+    prov: "Richard's Vale — Session 37"
+    holder: "Red keeps it"
+    description: "Four words. 'I'm sorry, Red. — Sarah.' Nothing since."
+  - name: "The Envelope from Thagram"
+    img: "the-envelope-from-thagram"
+    acqAt: 43
+    prov: "The deep"
+    holder: "Erik's pack"
+    description: "An envelope from the warlord who didn't make it out of the tunnel."
+  - name: "Bruno's Dog Collar"
+    img: "brunos-dog-collar"
+    acqAt: 1
+    prov: "—"
+    holder: "Red's pack"
+    description: "Nobody on record knows who Bruno is. Red does."
+  - name: "Instructions to Take Care of the Root of the Tree"
+    img: "instructions-to-take-care-of-the-root-of-the-tree"
+    acqAt: 35
+    prov: "Written by William — Session 35"
+    holder: "Erik, who follows them"
+    description: "One page, in William's hand, on the care and keeping of the most important living thing in the kingdom."
+  - name: "A Brown-and-White Feather"
+    img: "a-brown-and-white-feather"
+    acqAt: 16
+    prov: "The road west — Session 16"
+    holder: "Erik"
+    description: "He was a good hawk."
+  - name: "Four Adult Green Dragon Claws"
+    img: "four-adult-green-dragon-claws"
+    acqAt: 31
+    prov: "The battle for Greenwatch — Sessions 30–31"
+    holder: "Red's pack"
+    description: "What's left, on hand, of the keep's previous management."
+  - name: "The Drawn Cards"
+    img: "the-drawn-cards"
+    acqAt: 20
+    prov: "The Deck of Many Things — Session 20"
+    holder: "Memory, mostly"
+    description: "An enemy. A cottage. The ire of a devil. And one wish, spoken by a barkeep, that ended an age."
+  - name: "The Mephis— Monolith"
+    img: "the-mephis-monolith"
+    acqAt: 24
+    prov: "Found on duchy land — the first weeks at Greenwatch"
+    holder: "Where it stands"
+    description: "A broken stone with half a name on it. The rest has been missing a long time."
+  - name: "The Red and Green Crystals"
+    img: "the-red-and-green-crystals"
+    acqAt: 34
+    prov: "The root chamber — Sessions 34–35"
+    holder: "Erik's keeping"
+    description: "Keys, or warnings, or both. Red turns green under fire. The red ones feel, in Erik's words, 'connected to Velkora somehow.'"
+  - name: "Two Potions: Really Smart, Really Dumb"
+    img: "two-potions-really-smart-really-dumb"
+    acqAt: 13
+    prov: "Acquired along the way"
+    holder: "Red's pack"
+    description: "One makes you really smart. One makes you really dumb. They look the same."
+  - name: "Monster Manual for Dummies"
+    img: "monster-manual-for-dummies"
+    acqAt: 12
+    prov: "Red's library"
+    holder: "Red"
+    description: "Red is doing the reading."
+  - name: "The Wooden Sphere's Poem"
+    img: "the-wooden-spheres-poem"
+    acqAt: 13
+    prov: "The burned circle — Session 13"
+    holder: "The party's records"
+    description: "Found inside living wood at the center of a perfect circle of ash. Still unexplained."
+  - name: "The Brother's Letter"
+    img: "the-brothers-letter"
+    acqAt: 21
+    prov: "After the wish — Session 21"
+    holder: "Erik"
+    description: "What he knew, what he feared, and where he left the map. With a man. Not a man. A monster."
+
+# ---------------------------------------------------------------------
+# Clues: Key mysteries and plot hooks on the clue board
+# ---------------------------------------------------------------------
+clues:
+  - title: "A Gift, Once a Season"
+    sinceAt: 47
+    q: "'Because I like you, I’ll offer those boons free of charge once a season.'"
+    description: "A letter from Velkora, carried to the castle by the courier Grimshaw, with a token returned that William had left behind. The contract is closed — and still she offers gifts. No price is named. That is what makes it worth fearing."
+  - title: "The Grey in the Root"
+    sinceAt: 47
+    q: "‘Help me.’"
+    description: "The World Tree root beneath the keep has gone grey and cold, a streak of it running the height of the wood. The node it guards is dying; the Tree spends itself to keep it alive. Touched, it pleads. Its keeper can steady it — but the grey only spreads when pressed, and will not lift until the source is stopped, far below."
+  - title: "A Devil, the Drow, and the Red One"
+    sinceAt: 47
+    q: "What the Tree fears"
+    description: "Asked how it might be saved, the root named the hands at its throat: a devil and her minions, the drow, and the red one. Three threats the party has heard before in other words — now spoken together, by the Tree itself."
+  - title: "I'm Sorry, Red"
+    sinceAt: 37
+    q: "'I'm sorry, Red. — Sarah'"
+    description: "Who is Sarah, what was she to Red, and what was she sorry for? A fire evoker's sword and spellbook left behind, a town that forgot her, and a letter that remembered. Faye Willowleaf, well-traveled, had not heard the name."
+  - title: "The Crown's Second Sentence"
+    sinceAt: 31
+    q: "'That's all I can tell you. But there's more.'"
+    description: "The crown carries an enchantment deeper than any mortal reading. Only a devil or a god could explain it. Neither has been asked. Yet."
+  - title: "Why, and By Whom"
+    sinceAt: 30
+    q: "'It seems to have been a trap. We do not know why or by who.'"
+    description: "The party's own note on taking the crown. Someone wanted it taken, or wanted it found. Still unanswered since Session 30."
+  - title: "The Mephis— Monolith"
+    sinceAt: 24
+    q: "Half a name on broken stone"
+    description: "Standing on duchy land, older than the duchy, older than the kingdom. What did the missing half spell? Checked again on the road south: it cannot be lifted, sunk deep as bedrock, and the broken edge is worn smooth — by intent, or by ages. Magic lingers in it, of no school anyone can name."
+  - title: "The Absence"
+    sinceAt: 46
+    q: "No Alistair at court"
+    description: "Alistair was absent from the royal court. No word since."
+  - title: "The Others Above Velraen"
+    sinceAt: 40
+    q: "'Including Marleaux. But not limited to.'"
+    description: "The duergar named a hierarchy with its top in shadow. Thagram served Velraen. Velraen serves... whom?"
+  - title: "The Chained Pit"
+    sinceAt: 34
+    q: "'Another dimension. Void, or the hells.'"
+    description: "A bottomless hole beneath the keep, bound in chains older than memory. Even Silvanus wouldn't name its far end."
+  - title: "The Unfinished Instrument"
+    sinceAt: 34
+    q: "'No forgefire without a song'"
+    description: "A great instrument in the deep complex, missing its water parts, beside a pool, beside the founders' bones. Built to be played. Never finished. Or never restarted."
+  - title: "The Keeper's Touch"
+    sinceAt: 34
+    q: "'Here labored the crew of Master Delruk, Fifth Keeper of the Root'"
+    description: "The walls beneath Greenwatch use a familiar title, a thousand years before Titus stole it. Nobody has pulled this thread yet."
+  - title: "The Thing With Tentacles"
+    sinceAt: 48, 
+    q: "'A large monster... an unknown monster.'" 
+    description: "Faye Willowleaf\u2019s company, the Rangers of the Woods, chased a great tentacled thing that even she cannot name. She was found alone. Whatever it is, it is somewhere ahead."
+  - title: "She Has Met Marleaux"
+    sinceAt: 48, 
+    q: "Asked plainly, she answered plainly: yes."
+    description: "Faye has met Marleaux \u2014 the same name the duergar placed above Velraen. What the ranger knows, and how she came to know it, is worth asking."
+
+# ---------------------------------------------------------------------
+# Mapspots: High-level overland regions/towns
+# ---------------------------------------------------------------------
+mapspots:
+  - name: "Greenwatch Keep"
+    x: 36.15
+    y: 45.74
+    visited: true
+    reached: 24
+    blurb: "Seat of the party. Taken from two green dragons and built up ever since. The root, the node, and the house beneath the house all sit below it. The way into the Underdark is nearby."
+  - name: "Richard's Vale"
+    x: 39.90
+    y: 41.11
+    visited: true
+    reached: 24
+    blurb: "Duchy town run by Ruffe and Florence. Home of the Rough and Tumble. Site of the false hydra."
+  - name: "Richard's Peak"
+    x: 43.23
+    y: 44.81
+    visited: false
+    blurb: "Named for the same old king as the Vale. The party hasn't been."
+  - name: "Emberhold"
+    x: 30.31
+    y: 48.70
+    visited: true
+    reached: 26
+    blurb: "The dwarven hold and the party's allies. Thrain is High Mason; Chanticlear was theirs. The Emberhold dwarves work the Stonebriar mines nearby, where the tremors first led and the machine was found."
+  - name: "The Hearthgrove Vale"
+    x: 26.88
+    y: 54.44
+    visited: false
+    blurb: "On the map. Not yet in the story."
+  - name: "Knightsroost"
+    x: 38.65
+    y: 54.81
+    visited: false
+    blurb: "On the map. Not yet in the story."
+  - name: "The Eternal City"
+    x: 38.75
+    y: 65.00
+    visited: true
+    reached: 24
+    blurb: "The Capital. Seat of King Aleric Valethorn the 5th and the Throne of Power. The party has stood before it twice."
+  - name: "Easterlaque"
+    x: 50.94
+    y: 47.59
+    visited: true
+    reached: 1
+    blurb: "Lakeside town where it all started. The circus, the deviltoad, and the Kollosensteins, Red's family, who guard it."
+  - name: "Zadash"
+    x: 49.90
+    y: 32.04
+    visited: true
+    reached: 4
+    blurb: "The great city of the east. The Evening Nip, the Tri-Spires, Pumat Sol, and the night the roots came."
+  - name: "Allfield"
+    x: 56.15
+    y: 36.30
+    visited: true
+    reached: 3
+    blurb: "Gnoll battle alongside the Crownsguard, and the academy where Shadow was found. Aero Planes' hometown."
+  - name: "Wind Hill"
+    x: 64.27
+    y: 28.52
+    visited: false
+    blurb: "On the map. Not yet in the story."
+  - name: "Cattlekeep"
+    x: 66.25
+    y: 48.33
+    visited: true
+    reached: 18
+    blurb: "The Buffalo lands' great fort, freed from Malachi. Held by Theodric and Nyssa in the party's name."
+  - name: "Greenhill Glade"
+    x: 75.94
+    y: 45.00
+    visited: false
+    blurb: "On the map. Not yet in the story."
+  - name: "Ashborne"
+    x: 79.27
+    y: 72.22
+    visited: false
+    blurb: "Rho Khetshypp's home village, out in the Buffalo lands."
+  - name: "Pear Cities"
+    x: 44.17
+    y: 75.37
+    visited: false
+    blurb: "Cities of the south. Clyde once headed this way."
+  - name: "Zagarot"
+    x: 18.75
+    y: 20.74
+    visited: false
+    blurb: "The sealed empire behind the northern mountains. Erik has seen its walls. The walls shot first."
+
+# ---------------------------------------------------------------------
+# Deepnodes: Underdark subterranean route nodes
+# ---------------------------------------------------------------------
+deepnodes:
+  - name: "Greenwatch (The Way Down)"
+    x: 150
+    y: 90
+    visited: true
+    kind: "stop"
+    blurb: "Home. The descent does not start here anymore. The dig tunnel under the keep is collapsed, so the only open way down is a half-day overland, in the Hearthgrove Vale."
+  - name: "The Throat"
+    x: 250
+    y: 210
+    visited: true
+    kind: "stop"
+    blurb: "A cave mouth in the Hearthgrove Vale, about half a day from the keep. This is the way in now. Bring rope and bring light; the first mile drops fast and the footing is bad."
+  - name: "The Tollgate"
+    x: 330
+    y: 300
+    visited: true
+    kind: "stop"
+    blurb: "A drawn bridge kept by Wickthorn Gulple, a deep gnome who trades passage for wit. The party passed by solving the riddle of his name. On the way back, there may be a toll of some kind."
+  - name: "The Worm Road"
+    x: 310
+    y: 400
+    visited: true
+    kind: "stop"
+    blurb: "Smooth tunnels bored by Tal'Tutin. You know him; he is friendly if he knows it is you. Make noise he recognizes before you enter, or he may take you for prey."
+  - name: "The Sea of Glass Mushrooms"
+    x: 430
+    y: 480
+    visited: false
+    kind: "stop"
+    blurb: "A glowing fungal forest. Do not eat anything, do not set fires, and if you hear singing, keep walking and do not answer it. The spores carry sound for miles."
+  - name: "The Dead Hold of Karaz-Brim"
+    x: 380
+    y: 570
+    visited: false
+    kind: "stop"
+    blurb: "A dead dwarven hold you have to pass through; there is no way around. The vault door only opens for an honest game, so play it straight and do not cheat. The hold keeps count."
+  - name: "The Sunless Crossing"
+    x: 300
+    y: 660
+    visited: false
+    kind: "stop"
+    blurb: "A black lake with a chain ferry. Cross in full darkness; do not use light of any kind on the water. Hold the chain, go slow, and ignore whatever knocks on the hull."
+  - name: "The Grotto of Reaching Roots"
+    x: 340
+    y: 750
+    visited: false
+    kind: "stop"
+    blurb: "A cavern where a root of the world tree reaches this deep. It is safe, and it may be important to Erik. I do not know why I am certain of that, but I am."
+  - name: "The Drow Frontier"
+    x: 310
+    y: 840
+    visited: false
+    kind: "stop"
+    blurb: "The border of Uth'tar. A black arch counts everyone who passes under it, so understand that once you cross, the queen knows you are coming. There is no sneaking past this."
+  - name: "The Staging Grounds"
+    x: 420
+    y: 910
+    visited: false
+    kind: "stop"
+    blurb: "Foundries and holding pens where the dig was supplied. If you want to know what they were building and who they answer to, the answers are here. So are a great many of them."
+  - name: "Uth'tar, the Last Door"
+    x: 400
+    y: 975
+    visited: false
+    kind: "stop"
+    blurb: "The queen's seat. Velraen is here, and this is where the cold and the power come from. I have been inside once. I will tell you what I remember, but not gladly."
+  - name: "The Quiet Choir"
+    x: 560
+    y: 520
+    visited: false
+    kind: "dread"
+    blurb: "I have not been here and I will not take you. If you hear voices singing together off the path, that is this place, and you should go the other way."
+  - name: "The Stair That Goes Down"
+    x: 560
+    y: 950
+    visited: false
+    kind: "dread"
+    blurb: "There is something below even the queen. I have never seen it. I still know it is there, and so does she. Do not go looking for it."
